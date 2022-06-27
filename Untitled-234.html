@@ -1,0 +1,1037 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const numArrary = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', '',
+		// 	'eleven', 'tweleve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'sevnteen', 'eighteen', 'nineteen'];
+		// const multiplesArrary = ['billion','', 'crore', '','lakh', '','thousand', 'hundred', 'ten', ''].reverse();
+		// const eis = ['ten', 'twenty', 'thrity', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+    
+    
+// function substr(n){
+//     let inputArrary= n.split('');
+// let inwords = '';
+
+//  while(inputArrary.length>0){
+//      if(inputArrary.length ==1){
+//     inwords= inwords+" "+numArrary[inputArrary[0]];
+//     break
+//      }
+//      if(inputArrary.length==2|| inputArrary.length==5){
+//       let tempNumber=  inputArrary[0]+inputArrary[1];
+//       if(parseInt(tempNumber) <19){
+
+//         inwords = inwords+ " "+append([+tempNumber],inwords,inputArrary.length-2);
+//          if(inputArrary.length>2){
+//              inputArrary.splice(0,2);
+//          }else{
+//              break;
+//          }
+
+//       }  else{
+//           inwords = inwords+ ' '+eis[inputArrary[0]-1]+"";
+//           inputArrary.splice(0,1)
+//       }
+
+
+
+//      } else{
+//           inwords = inwords+ numArrary[inputArrary[0]]
+//           inwords= inwords+multiplesArrary[inputArrary.length-1]
+//            inputArrary.splice(0,1)
+//      }
+//  }
+
+// return inwords;
+
+
+
+//  }
+
+//  function append(subArrary,wordings, index){
+//      let tempArr ='';
+//      if(subArrary && subArrary.length == 0){
+//          return tempArr;
+//      }
+//      tempArr = wordings+ ""+ numArrary[subArrary[0]];
+//      tempArr= tempArr+" "+ multiplesArrary[subArrary.length-1];
+//       return tempArr;
+//  }
+
+//   console.log('12345')
+//  console.log(substr('122222'))
+
+
+
+// const less20 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven',
+// 			'tweleve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'eighteen', 'nineteen', '']
+// 		const mulitples10 = ['', 'ten', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+// 		const mulitples100 = ['', '', 'hundred', 'thousand', 'thousand', 'lakh', 'lakh', 'crore', 'billion'];
+//  let wording = '';
+//   function numtoc(n){
+//      if(n.length=== 1 || n.length === 0){
+//          if(n.length === 1){
+//              wording=""+ wording+" "+less20[n[0]];
+//              console.log(wording)
+//              return wording
+//          }
+
+//      }
+
+//      if(n.length === 2){
+
+//        if( n< 19){
+//            wording = ''+wording+" "+ less20[n[0]];
+//             n= n.slice(2);
+//        }  else{
+//            wording= " "+wording+" "+mulitples10[n[0]]
+//             n = n.slice(1)
+//              numtoc(n)
+//               console.log(wording)
+//        }
+//      }  else if( n.length % 2 === 0){
+//              wording = wording+" "+less20[n[0]];
+//               wording = wording+ " "+ mulitples100[n.length-1]
+//                console.log(wording)
+//                 n = n.slice(1)
+//              console.log(n)
+//               numtoc(n)
+
+//      }  else{
+
+//            if(n.length === 3){
+//                wording = wording+ " "+less20[n[0]];
+//                wording = wording+ " "+ mulitples100[n.length-1];
+//                console.log(wording)
+//                 n= n.slice(1)
+//                  console.log(n)
+//            } else{
+//                let currentnum = n.slice(0,2)
+//                if(currentnum < 20){
+//                     console.log(currentnum);
+//                    wording = ' '+ wording+" "+less20[n.slice(0,2)];
+//                    wording = " "+wording+" "+mulitples100[n.length-2];
+//                     console.log(wording);
+
+//                } else{
+//                     wording= ' '+wording+" "+mulitples10[n.slice(0,1)];
+//                     wording= ' '+wording+" "+less20[n.slice(1,2)];
+//                     wording = " "+wording+" "+mulitples100[n.length-2];
+              
+//                 }
+//                 n= n.slice(2);
+
+//                 console.log(n)
+//            }
+//            numtoc(n)
+//      }
+
+
+//   }
+
+
+//   console.log('4245')
+// numtoc("4245")
+
+//   function BTN(value){
+//       this.value= value;
+//       this.leftChild = null;
+//       this.rightChild=null;
+
+//   }
+//    function BST(){
+//         this.root = null;
+//    }
+//     BST.prototype.PreOrder= function(){
+//         TraversePreOrderHelper(this.root);
+//        function traversePreOrderHelper(node){
+//             if(!node)
+//              return;
+//              console.log(node.value)
+//               traversePreOrderHelper(node.left);
+//               traversePreOrderHelper(node.right)
+//          }
+         
+//     }
+
+//     BST.prototype.insert = function(value){
+//               let val= {
+//                   value:value,
+//                   left:null,
+//                   right:null,
+
+//               };
+
+//               if(!this.root)
+//               {
+//                   this.root = val;
+//               } else{
+//                   let currentroot = this.root;
+//                    console.log(currentroot)
+//                     while(true){
+//                         if(currentroot.value > value){
+//                             if(currentroot.left!=null){
+//                                 currentroot= currentroot.left
+//                             } else{
+//                                 currentroot.left = val;
+//                                 break;
+//                             }
+//                         } else if(currentroot.value <value){
+                            
+//                                 if(currentroot.right !=null){
+
+//                                     currentroot= currentroot.right;
+//                                 } else{
+//                                     currentroot.right = val;
+//                                      break;
+//                                 }
+//                             } else{
+//                                 break;
+//                             }
+//                         }
+//                     }
+//               } 
+    
+
+
+//     BST.prototype.PostOrder= function(){
+//         TraversePostOrderHelper(this.root);
+//        function traversePostOrderHelper(node){
+//             if(node.left)
+//             traversePostOrderHelper(node.left)
+//             if(node.right)
+//               traversePostOrderHelper(node.right)
+//                console.log(node.value)
+//          }
+         
+//     }
+//     BST.prototype.levelorder = function (){
+//          var currentroot = this.root;  let queue = [];
+//           if(!currentroot)
+//              return;
+//              queue.push(currentroot);
+//      while(queue.length){
+
+//        var temp = queue.shift();
+//          console.log(temp)
+//        if(temp.left)
+//        queue.push(temp.left);
+//         if(temp.right)
+//         queue.push(temp.right);
+
+//      }
+//     }
+
+//     BST.prototype.findNode= function(value){
+//           var currentroot = this.root, found=false;
+//           while(currentroot){
+//                  if(currentroot.value >value){
+//                      currentroot= currentroot.left;
+
+//                  } else if(currentroot.value <value){
+
+//                     currentroot= currentroot.right;
+//                  }
+                 
+//                  else{
+//                      found= true;
+//                      console.log("found",value);
+//                      break;
+//                  }
+//           }
+
+//  return found;
+
+//     }
+   
+//  var bst1 = new BST();
+  
+//  bst1.insert(35)
+//  bst1.insert(12)
+//   bst1.levelorder();
+//   console.log([bst1])
+
+
+
+ 
+//  function madmax(text){
+//      const groups = Array.from(Array(26), ()=>[]);
+// //      26
+     
+//      for(let i=1; i<text.length; ++i){
+//         groups[text.charCodeAt(i)-97].push(i);
+        
+//      }
+// //      iter 1
+   
+//      let res =0;
+     
+//      groups.forEach((group)=>{
+//         let cur=1; let SUM=0; let pre =0;
+//        for(let i=0; i<group.length; ++i){
+//          if(group[i] === group[i-1]+1) ++ cur;
+//           else pre = (group[i] === groups[i-1]+2 ? cur : 0, cur=1);
+//          SUM = Math.max(SUM,pre+cur);
+         
+//        }
+//         res= Math.max(res,SUM+(SUM < group.length ? 1 : 0));
+//      })
+//         return res;
+   
+//    }
+
+// let x = 'abbasdsd';
+// madmax(x);
+//  console.log(madmax(x),'min Count 1')
+
+
+
+
+// function TrieNode() {
+// 			this.children = {};
+// 			this.endofword = false;
+// 		}
+
+// 		function Trie(){
+// 			this.rootNode = new TrieNode();
+//     }
+
+// Trie.prototype.insert = function(word){
+//   insertRec(word, this.rootNode);
+//    function insertRec(word, currentNode){
+//      if(word.length === 0){
+//        currentNode.endofword= true;
+//        return;
+//      }
+//       let key = word.charAt(0);
+//      let node = currentNode.children[key];
+//       if(node == null){
+//         node = new TrieNode();
+//       currentNode.children[key] = node;
+        
+//       }
+//      insertRec(word.slice(1),node);
+//    }
+// };
+
+// Trie.prototype.search = function (word){
+//    searchRec(word, this.rootNode);
+//   function searchRec(word,node){
+//       if(word.length == 0){
+//         console.log(` word is Found`, node.endofword);
+//         return node.endofword;
+//       }
+    
+//      var key = word.charAt(0);
+//     let currentNode = node.children[key];
+//     if(currentNode == null){
+//       console.log('word not found');
+//       return false;
+//     }
+//     searchRec(word.slice(1),currentNode);
+//   }
+  
+// }
+
+// Trie.prototype.delete = function (word){
+        
+//       deleterec(word,this.rootNode, 0);
+     
+//    function deleterec(word,node,index){
+     
+//       if(index == word.length){
+
+//      if(!node.endofword){
+//        return false;
+//      }
+
+//         node.endofword =false;
+//         return Object.keys(node.children).length == 0;
+//       }
+
+//       var ch = word.charAt(index);
+//       current = node.children[ch];
+
+     
+//      if( current == null){
+//         return  false;
+//      }
+//      var shoulddel = deleterec(word,current,index+1);
+
+//      if(shoulddel){
+
+//        delete node.children[ch];
+//     //    return Object.keys(current.children).length == 0;
+        
+//      }
+      
+//     //  return false; 
+//    }
+// }
+  
+
+
+
+
+
+
+//  let tires = new Trie();
+//  tires.insert('abcf');
+//  tires.search('abc');
+//  tires.insert("hell")
+//   tires.delete('hel')
+//   console.log([tires])
+
+ 
+// function merge(leftArrary,rightArrary){
+//     let result =[];
+//     let leftIndex =0, rightIndex=0;
+//    while(leftIndex < leftArrary.length && rightIndex <rightArrary.length){
+//        if(leftArrary[leftIndex] < rightArrary[rightIndex]){
+//            result.push(leftArrary[leftIndex++]);
+//        } else result.push(rightArrary[rightIndex++]);
+
+//    }
+//     let leftRemain = leftArrary.slice(leftIndex),
+//         rightRemain = rightArrary.slice(rightIndex);
+
+//          return result.concat(leftRemain).concat(rightRemain);
+
+// }
+
+// function mergesort(input){
+
+//    if(input.length < 2){
+//        return input;
+//    }
+
+//     let mid = Math.floor((input.length)/2);
+//     let leftArrary= input.slice(0,mid);
+//     let rightArrary = input.slice(mid);
+//       console.log(leftArrary)
+//       console.log(rightArrary)
+
+//     return merge(mergesort(leftArrary),mergesort(rightArrary))
+// }
+
+//  console.log(mergesort([6,7,8,9,11,2,1]))
+
+
+
+
+// function TreeNode(nodevalue){
+//   this.value = nodevalue;
+//   this.leftchild = null;
+//    this.rightchild = null;
+  
+// }
+//  function BinaryTree(){
+//    this.root = null;
+//  }
+
+// BinaryTree.prototype.insert = function(nodevalue){
+//    if(!this.root)
+//    {
+//     this.root = new TreeNode();
+//       return ;
+     
+//    }
+//    let currentNode = this.root;
+//     console.log(currentNode.value)
+//    while(true){
+//    if(currentNode.value > nodevalue){
+//      if(currentNode.leftchild !=null){
+//        currentNode = currentNode.leftchild;
+//          }  else{
+//             currentNode.leftchild =new TreeNode(nodevalue);
+//          }
+     
+     
+//    } else if(currentNode.value < nodevalue){
+     
+//      if(currentNode.value != null){
+//        current.rightchild =  new TreeNode(nodevalue);
+//      } else{
+//        currentNode.right = new TreeNode(nodevalue);
+//         return;
+//      }
+     
+//    }
+   
+//    }
+  
+  
+  
+  
+  
+// };
+ 
+
+// let binaryTree = new BinaryTree();
+//  binaryTree.insert(34);
+
+  //  abcdcba 
+
+//   function even (n){
+//       console.log(n.length)
+//       if(n % 2== 0){
+//         console.log(`${n} x is even`)
+//       } else if((Number(n)) && n% 2!=0){
+//         console.log(`${n} is odd`)
+
+//       } else{
+//          console.log("enter valid NUmber")
+//       }
+    
+//  }
+
+//  even('abcd')
+
+//  function pailndrome(n){
+//     let str = n.length;
+//       for(let i=0; i<str/2; i++){
+//           if(n[i] != n[str-1-i]){
+//              console.log("Not palindeome")
+//           } else{
+//               console.log("palindrome")
+//           }
+          
+//       }
+
+//  }
+  // pailndrome("121")
+  
+  // function prime(n){
+  //     if( n% 2 == 1 && n%3 == 1){
+  //         console.log(`${n}`)
+  //     } else if(Number(n)){
+  //        console.log(`${n} not a prime`)
+  //     } else{
+  //        console.log('enter correct number')
+  //     }
+  // }
+  //  prime(12)
+ 
+  //  function isprime(n){
+  //     if(n== 1 || n ==0){
+  //        return 'false'
+  //     }
+
+  //     for(let i=2; i<n; i++){
+  //       if(n % i == 0) return false;
+  //     }
+  //        return true;
+
+  //       }
+
+  //  var r =10;
+  //    for(let i=0; i< r; i++){
+  //      if(isprime(i)){
+  //         console.log(i)
+  //      }
+  //    }
+  //   isprime(10)
+
+
+//  function isEven(n){
+//      for(let i =1; i<n; i++){
+//        if(n % 2 != 0) return false;
+//      }
+//       return true;
+//  }
+//   let x =12;
+//      for( let i=2; i<x; i++){
+//        if(isEven(i)){
+//          console.log(i)
+//        }  
+//      }
+
+//  let x = 154;
+//   let sum =0;
+//    let temp = x;
+
+//    while( temp >0){
+//      let rem = temp % 10;
+//      sum += rem*rem*rem;
+//      temp = parseInt(temp/10)
+
+//    }
+//     if(sum === x){
+//        console.log(`${x}is arm strong`)
+//     } else{
+//       console.log("not rmstrong")
+//     }
+
+  //  let n1 =0;
+  //   let n2 = 1, nexterm =0;
+  //    let x = 10;
+  //      for (let i=0; i<x; i++){
+  //          nexterm = n2+n1;
+  //          n1 = n2;
+  //           n2 = nexterm;
+  //         console.log(n2)
+
+  //      }
+    
+    //  palin recusrsive
+
+    // var ispalin = function(str){
+
+    //   var strl = str.length;
+
+    //   if(strl == 0 || strl == 1){
+    //     return true;
+    //   }
+
+    //    if(str[0] == str[strl-1]){
+
+    //     return ispalin(str.slice(1,strl-1))
+    //    }
+    //     return false;
+    // }
+
+    //   console.log(ispalin('madam'));
+
+  
+    // Finonacici
+
+    //  function fibs(n){
+    //       if( n <2 ){
+    //          return n
+    //        } else{
+    //           return  fibs(n-1)+ fibs(n-2)
+    //        }
+    //  }
+    //      console.log(fibs(12))
+     
+      //  let x = ('1234')
+      //      function splis(n){
+      //       let ar = n.split('');
+      //         let total =0;
+      //          for(var i in ar){
+      //            total += parseInt(ar[i]);
+
+      //          }
+      //           console.log(total)
+      //      }
+      
+
+      //       splis(x)
+ 
+//  let x = ('156')
+//    function hars(n){
+
+//      let ar = n.split('');
+//         let total =0;
+//       for(let i in ar){
+//         total += parseInt(ar[i])
+         
+//       }
+
+//       if( n% total == 0){
+//             console.log("hardsa")
+//          } else{
+//               console.log("not a hrashd")
+//          }
+//    }
+//         hars(x)
+
+            // function patt(n){
+            //   for(let i=0; i<n; i++){
+            //     let k =65;
+            //      let m = 0;
+            //   for(let j =0; j<= (n*2); j++){
+            //     if( j >= n+1-i && (j<= n+i)){
+            //          if(j<= n){
+            //             console.log( String.fromCharCode(k))
+            //             k++
+            //          } else{
+            //             console.log(m)
+            //              m++
+            //          }
+            //     } else{
+            //        console.log('+')
+            //     }
+
+            //   }
+
+            //   }
+            // }
+            //  patt(10)
+
+            //  let arr1 = [1,2,6];
+            //   let arr2 = [3,4,5]
+
+            //   function cart(x,y){
+            //     let result=[];
+            //     for(let i=0; i<x.length; i++){
+            //       for(let j=0; j<y.length; j++){
+            //         result.push([x[i],y[j]])
+            //       }
+            //     }
+            //      return console.log(result);
+            //   }
+            //     cart(arr1, arr2)
+   
+          //  function checkdate(n){
+          //      if( (n% 4 ==0) && (n%100 !=0 || n%400 == 0)){
+          //            console.log(`${n} is leap year`)
+          //      } else if(Number(n)){
+          //             console.log("not a leap year")
+          //      } else{
+          //          console.log("enter number")
+          //      }
+          //  }
+          //   checkdate(2020)
+           
+    
+       
+
+        // function longest(str){
+        //    let len = str.length;
+        //     let max =1; start=0;
+
+        //     for(let i=0; i<str.length; i++){
+        //       for(let j =0; j< str.length; j++){
+        //     let count= 1;
+                    
+        //         for(let k =0 ; k<((j-i+1)/2); k++){
+        //            if(str[i+k] != str[j-k]){
+        //              count =0;
+        //            }
+
+        //            if( count && (j-i+1)> max){
+
+//                     start =i;
+//                     max = j-i+1;
+
+//                    }
+//                 }
+//               }
+//             }
+//  return max
+//         }
+
+//        var str = 'abcdcba'
+
+// console.log(longest(str))
+      
+      // climbing stailrs     
+// function climn(n){
+//     let nodays =[1,2];
+//     for(let i=2; i<n;i++){
+//     nodays[i]= nodays[i-1]+nodays[i-2];
+//     }
+//      console.log(nodays)
+//      return nodays[n-1]
+// }
+//  console.log(climn(5))
+
+
+
+// function sort(names)
+// {
+//     let string="";
+//    let  ss="";
+//     let namestring=names.split("");
+
+//     for(j=0;j<namestring.length;j++) {
+//         for(i=j;i<namestring.length;i++) {
+//             if(string.includes(namestring[i])) // if contains not work then  
+//                 break;                         //use includes like in snippet
+//             else
+//                 string+=namestring[i];
+//          }
+//          if(ss.length<string.length)
+//              ss=string;
+//          string="";
+//     }
+//     return ss.length;
+// }
+// console.log(sort("basweas"));
+
+// longested substring without repeating wprds
+//  function rep(s){
+//     let vis = {};
+//      let count=0;
+//      let result=0;
+//      for(let i=0; i<s.length; i++){
+//        if(vis[s[i]]){
+//          i= vis[s[i]];
+//          vis={};
+//          count=0;
+//           console.log(i)
+
+//        }
+//         vis[s[i]]= i+1;
+//         count++;
+
+//          if(count>result) result=count; 
+//      }
+//       return result
+//  }
+//      console.log(rep("abcdeab"))     
+
+
+//  function palim(s){
+//   if(s.length <1 || s.length == null) return '';
+//  let longest ="";
+    
+
+//   for(let i=0; i<s.length; i++){
+//     var oddPalin = checkpalin(s,i,i);
+//      var evenpalin= checkpalin(s,i,i+1);
+
+//       if(evenpalin.length > longest.length){
+//         longest = evenpalin;
+//        }
+//       if(oddPalin.length >longest.length){
+//         longest = oddPalin;
+//       } 
+      
+//   }
+//  return longest;
+// }
+
+  // function checkpalin(str,left, right){
+  //   let i =0;
+  //  while( str[left-i] && str[left-i] === str[right+i]){
+  //     i++;
+  //  }
+  //  i--;
+  //  return str.slice(left-i ,right+i+1);
+  // }
+
+  // console.log(palim('bobmarile'))
+
+
+//  Triangle sum  of the path
+
+  //  let x = [[2],[3,4],[6,5,7],[4,1,8,3]]
+  //      function  minsum(A){
+  //        let result= [];
+  //        let n = A.length-1;
+  //         for(let i=0; i<A[n].length; i++){
+  //           result[i] = A[n][i]
+
+  //         }
+
+  //            for(let i=A.length-2; i>=0; i--){
+
+              
+  //            for(let j=0; j<A[i].length; j++){
+
+  //                result[j] = A[i][j]+ Math.min(result[j],result[j+1])
+  
+  //            }
+
+  //            } 
+  //            return result[0];
+
+  //      }
+  //    console.log(minsum(x));
+
+//       function bubblesort(arr){
+//          let swapped;
+//          do{
+//            swapped = false;
+//          for(let i=0; i<arr.length; i++){
+//             if(arr[i]> arr[i+1]){
+//                let temp = arr[i];
+//                arr[i] = arr[i+1];
+//                 arr[i+1]= temp;
+//               swapped = true
+//             }
+//           }
+//          } while(swapped)
+//       }
+
+
+// const arr = [8, 20, -2, 4, -6]
+//       bubblesort(arr) // [-6, -2, 4, 8, 20]
+//  console.log(arr)
+
+
+  //  function leftarr(nums,d){
+  //     let result= [];
+  //    for(let i=1; i<nums.length;i++){
+  //        result.push(nums.indexOf(i))
+  //    }
+  //     return result
+  //  }
+    
+  //   console.log(leftarr([1,2,3,4,5,6]))
+
+     // insertion sort
+      // function insrt(arr){
+      //    for(let i=0; i<arr.length; i++){
+      //     let number = arr[i];
+      //      let j =i-1;
+      //      while(j>=0 && arr[j]> number){
+      //        arr[j+1] = arr[j]
+      //         j= j-1;
+
+      //      }
+      //       arr[j+1] = number
+      //    }
+
+// Quicker sort second Method 
+
+        //  if(arr.length <2){
+        //    return arr;
+        //  }
+
+        // let pivot = arr[arr.length-1];
+        //  let left=[];
+        //  let right =[];
+        //   for(let i=0; i<arr.length-1; i++){
+        //      if(arr[i] < pivot){
+        //         left.push(arr[i])
+        //      } else{
+        //           right.push(arr[i])
+        //      }
+        //   }
+        //    let result = [...insrt(left),pivot,...insrt(right)]
+        //  return  result;
+
+      // } 
+
+
+
+    // const arr = [6,4,5,3,2,1]
+    //   insrt(arr)
+    //    console.log(arr)
+
+    //  class Node {
+    //   constructor(value, next= null){
+    //      this.value= value;
+    //       this.next= next;
+    //   }
+    //   add(){
+    //      this.value = this.value.push()
+       
+    //   }
+
+    //  }
+    //   let newNoe= new Node([1,2,3,4,5]);
+    //    console.log(newNoe)     
+    //            newNoe.add(8)
+
+
+
+//     let x = [1,2,2,3,4,5,5];
+//     let uniq = [];
+//    let dup = [];
+//  function dupe(n){
+//     if(uniq.includes(n)){
+//       if(dup.indexOf(n)=== -1){
+//            dup.push(n);
+//       }
+//     } else{
+//        if(uniq.indexOf(n) === -1){
+//         uniq.push(n);
+//        }
+//     }
+    
+// }
+//  for(let i=0; i<x.length; i++){
+//    dupe(x[i])
+//  }
+//  console.log(dup.join(','))
+
+//    function single(n1,n2){
+//        let result =[];
+//          for(let i=0; i<n1.length; i++){
+//             let found = n2.indexOf(n1[i]);
+//             if(found != -1){
+//                 n2.splice(found, 1);
+//                 result.push(n1[i]);
+//             }
+//          }
+//       return  result    
+
+// }
+//   console.log(single([2,3,5,6],[1,2,3,4]));
+
+// const p1 = Promise.resolve(3);
+// const p2 = 1337;
+// const p3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("foo");
+//   }, 100);
+// });
+
+// Promise.all([p1, p2, p3]).then(values => {
+//   console.log(values); // [3, 1337, "foo"]
+// });
+
+ class queu{
+    constructor(){
+      this.items={};
+      this.front=0;
+      this.rear=0;
+
+    }
+  enque(element){
+    this.items[this.rear]= element;
+    this.rear++
+  }
+  deque(){
+    let items = this.items[this.front];
+    delete this.items[this.front];
+     this.front++;
+    return items
+  }
+  peek(){
+    return this.items[this.front];
+  }
+  size(){
+    return this.rear-this.front;
+  }
+  isEmpty(){
+    return this.rear-this.front === 0;
+  }
+   print(){
+    console.log(this.items)
+   }
+
+ }
+ const qw= new queu();
+  qw.enque(20);
+  qw.enque(40);
+  qw.enque(60);
+  console.log(qw.size())
+  console.log(qw.peek(),"first numbrer")
+  console.log(qw.isEmpty());
+console.log(qw.deque());
+console.log(qw)
+
+
+
+
+    </script> 
+
+<div>
+  <div id="first" >
+      <h1 onClick={firsts()} >  first  </h1>
+    <div class= "second" onClick={second1()}>
+      
+       second
+      
+      <div class= "Third" onClick={third1()}>
+       Third
+    </div>
+    </div>
+    
+  </div>
+</div>
+    
+</body>
+</html>
