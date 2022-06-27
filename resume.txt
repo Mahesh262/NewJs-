@@ -1,0 +1,351 @@
+ I am glad to introduce myself to you sir/madem,
+my name is mahesh i was born and raised in markapur and My graduation 
+ completed in bsc computer science as the main stream during graduation
+i am particpating the NSS campain we social services.
+i will never ever want to waste time. i am always wanted to upgrade my  new skills.
+ learned new technologies like java script jquery, bootsrap and react js ,
+ my father is a farmer it was very hard to gain money and he always respects the work.
+
+
+
+
+As a fresher i need a platform to start my career.In addition to this i have some 
+technical knowledge and a lot  
+of potential in me as well that would help me to sustain in your organisation.Being sincere and puntual.
+I can finish given work on time and will surely try my best to fullfill all needs for  this company
+
+
+
+yes sir i want to relocate.Due to this relocating we learn so many things like culture, langauges ,attitude of different people.it a best option
+
+
+
+ As a fresher ,i have no working experience in any situations .But I will put 100% effort in every situation. 
+At the same time under pressure  condition we have to use our inner talents also
+
+
+My strength are  optimistic and flexiblity, quick learner, self motivated reportify skills , i am adaptable in any kind, of environment, i try to balacne succes and failure in a balanced manner  and im optimistic i never lose hope, eagerness to learn new technologies,
+
+
+
+i am a bit traditional in my apporach, can't wait  for any thing ,
+ feeling like totally wasting of time, if anybody ask for help , i never say no
+
+
+React*
+. It is helpful in building complex and reusable user interface(UI) 
+components of mobile and web applications
+ as it follows the component-based approach.
+
+
+react hooks are introduced in 16.8,
+hooks call on top level, don't call in inside hooks,
+serer side rendering
+follows unidirections flow,
+
+udse resuable/composable ui components to develop the view;
+
+jsx
+is xml like syntax it is easily which render to view easily  in react
+
+
+useState()
+
+
+front end java script library and component based ui
+is develpoed by facebook
+
+jsx allows html
+
+
+useContext
+component allow passs data to children elements
+redux is frame work
+is open source js and used to mange state globally
+Thunk;
+allows you to write  action creates when return function use redux thunk create actions and returns actions
+
+
+useContext vs redux 
+
+hooks benfits, manage react state and life cycle features from function components
+hooks doesn't work inside classes
+
+mounting
+is the process of outputing, additional component to the dom
+mounting
+
+virutual /Dom
+virtual  ac
+Elements / component
+element is plain object describing what you want to appear on the screen in terms of dom
+components
+function,class components
+function component
+is simplest way to create a component,
+they are pure js function tha and rerun react elements
+
+class componert
+
+when to use 
+pure componet;
+is exactly the same as reactcomponent
+
+Nan is use the check the number argument 
+negative infinity
+
+ “In React, everything is a component.” Explain.
+Components are the building blocks of a React application’s UI. 
+These components split up the entire UI into small independent and
+ reusable pieces. Then it renders each of these components 
+independent of each other without affecting the rest of the UI.
+
+
+
+helps us to imporve performance to application when we are performing
+usememo will no tein every render
+use memo will render
+
+                                       wi,mll run after render of the component
+
+What is the purpose of render() in React.
+Each React component must have a render() mandatorily.
+ It returns a single React element which is the representation of the native DOM component.
+ If more than one HTML element needs to be rendered, 
+then they must be grouped together inside one enclosing tag such as <form>, <group>,<div> etc. This function must be kept pure i.e.,
+ it must return the same result each time it is invoked.
+
+What are Higher Order Components(HOC)?
+Higher Order Component is an advanced way of reusing the component logic. Basically, 
+it’s a pattern that is derived from React’s compositional nature. HOC are custom components which wrap another component within it. They can accept any dynamically provided child component but they won’t modify or copy any behavior from their input components. 
+You can say that HOC are ‘pure’ components.
+  
+
+
+"  Comopnent"
+React is a library that  let us split our ui into  re-usable parts these parts are  calld react componets we re use multiple places in our code
+
+What can you do with HOC?
+ A Hoc is a Function  that takes a component and return  a new Component
+HOC,can be used for many tasks like:
+
+"example :"Login page lke use Athentication "
+Code reuse, logic and bootstrap abstraction
+Render High jacking
+State abstraction and manipulation
+Props manipulation
+
+Explain the role of Reducer.
+Reducers are pure functions which specify how the application’s state changes
+ in response to an ACTION. Reducers work by taking in the previous state and action, and then it returns a new state. It determines what sort of update needs to be done based on the type of the action, and then returns new values. It returns the previous state as it is, 
+if no work needs to be done.
+
+What is the significance of Store in Redux?
+A store is a JavaScript object which can hold the application’s state and provide a few helper methods to access the state, 
+dispatch actions and register liseners. The entire state/ object tree of an application is saved in a single store.
+ As a result of this, Redux is very simple and predictable. 
+We can pass middleware to the store to handle the processing of data 
+as well as to keep a log of 
+various actions that change the state of stores. 
+All the actions return a new state via reducers.
+
+
+
+What are the advantages of Redux?
+
+"Redux is a javascript library for managing the application state".
+there is only one storage ,
+mainly used for large and complex,uses js Object to store
+
+Advantages of Redux are listed below:
+
+Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application.
+Maintainability – The code becomes easier to maintain with a predictable outcome and strict structure.
+Server-side rendering – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance.
+Developer tools – From actions to state changes, developers can track everything going on in the application in real time.
+Community and ecosystem – Redux has a huge community behind it which makes it even more captivating to use. A large community of talented individuals contribute to the betterment of the library and develop various applications with it.
+Ease of testing – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent.
+Organization – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
+
+
+ What is React Router?
+React Router is a powerful routing library built on top of React,
+ which helps in adding new screens and flows to the application.
+ This keeps the URL in sync with data that’s being displayed on 
+the web page. It maintains a standaredized structure and behavior 
+and is used for developing single page web applications.
+ React Router has a simple API.
+
+
+ Why do we need a Router in React?
+A Router is used to define multiple routes and when a user types a specific URL, if this URL matches
+ the path of any ‘route’ defined inside the router, then the user is redirected to that particular route. So basically, we need to add a Router
+ library to our app that allows creating multiple routes with each leading to us a unique view.
+
+
+
+npx  create react app
+
+  "rxjs"
+
+These libraries are very different for very different purposes, but there are some vague similarities.
+
+Redux is a tool for managing state throughout the application.
+ It is usually used as an architecture for UIs.
+ Think of it as an alternative to (half of) Angular. 
+RxJS is a reactive programming library. 
+It is usually used as a tool to accomplish asynchronous tasks in JavaScript. 
+Think of it as an alternative to Promises. 
+Redux uses the Reactive paradigm because the Store is reactive.
+ The Store observes actions from a distance, and changes itself.
+ RxJS also uses the Reactive paradigm, but instead of being an architecture,
+ it gives you basic building blocks, Observables, to accomplish this pattern.
+
+" how to send data parent to child "
+
+we can use callback  method it will children to parent method
+
+"Shallow copy & deep Copy"
+
+Shallow Copy stores the references of objects to the original memory address. Deep copy stores copies of the object's value.
+
+    
+
+
+
+"Server Side Rendering"
+
+whenever you open brower open a server to th website  request the page and it will the response 
+display the info on the screen it work by coverting Html files server into usable info for the  browser
+ whenever you visit a website  it makes req and that contains the content of the website , the request usally few minutes
+based internet speed
+
+
+Server-side rendering i.e. SSR is a well-known technique used for rendering the web pages on a server, rather than rendering them on the browser using JavaScript. In this process, client-side single-page applications are rendered on the server and then the fully rendered pages are sent to the client. The JavaScript bundle of the client takes over and allows the SPA framework to work. 
+This process enables the dynamic components to be served as static HTML markup.
+
+
+ "single page application"
+
+Single-page applications are the most popular way to create websites that load faster without hitting the server
+ every time the user interacts with the application.
+
+  "useContext"
+React context is nothing but a global state to the app. It is a way to make a particular data available to all the components no matter how they are nested. Context helps you broadcast the data and changes happening to that data, to all the components. 
+That’s why it is a very useful state management hook, 
+
+
+" Iconic FrameWork"
+
+Ionic Framework is an open-source UI toolkit that allows high-quality mobile and desktop applications 
+to be developed using web technologies. Ionic Architecture is based on the application’s interface or user experience. It is easy to learn,
+ easy to integrate, or used stand alone without a front frame using a simple script including other libraries or frameworks, such as Angile. 
+This Framework currently has official Angular and React integrations, and support for Vue are in the pipeLine.
+ 
+
+"UniDirectional data flow"
+
+the data has one, and only one way to be transferred to other parts of the application. 
+In essence, this means child components are not able to update the data that is coming from the parent component.
+
+Major Advantages 
+It increases the application’s performance
+It can be conveniently used on the client as well as server side
+Because of JSX, code’s readability increases
+React is easy to integrate with other frameworks like Meteor, Angular, etc
+Using React, writing UI test cases become extremely easy
+
+ What is a state in React and how is it used?
+
+States are the heart of React components.
+ States are the source of data and must be kept as simple as possible. 
+Basically, states are the objects which determine components rendering and behavior.
+ They are mutable unlike the props and create dynamic and interactive components.
+ They are accessed via this.state().
+ 
+ What are the Life Cycles  in React?
+
+ some of the important life cycles
+componety did mount ()
+it will render first only once call get return after instant call
+component did update()
+once we update  componet it will evaluated and get results
+ method is state value is update it will update  amazon lo cart lop product ad is known as component did update
+" component will unmount()"
+remove the element from dom eg:"removed call, "
+method when we remove  items in shopt carts  delete immediatly triggering
+
+Controlled vs uncontrolled
+
+Controlled
+
+Element data is can be controlled by parent component through like callback 
+and onChange is c
+
+Uncontrolled 
+Element data is controlled by DOM itself
+data cannot change other components form data inko component lo use cheyyalemu
+
+
+use Ref()
+ takes users  data takes and assign but we wont re render then use
+previous values store and auto focus  default values cursor on input box
+
+
+"useEffects()":
+In React functional components, 
+we perform side effects such as fetching data from an API or manually updating the DOM inside the useEffect hook.
+two arguments first argument passed to use effect is a function effect 
+array dependencies , it renders every function
+
+first argument =>  first argument returns a function undefined,.effect is executed
+  component mounted (on first render)
+useState()
+ why we use state()
+      react rendered the component once got monted
+will re-reder content change and update
+
+"javascript"
+
+In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. 
+This means, they can be seen everywhere in your JavaScript code.
+
+
+"CallBack"
+ it use performace optimization
+
+"shadow Dom "
+ it adds a subtree of Dom Elemnts into the rendering of a document, instead of adding it to the main  documents DOM tree
+ rleates mostly encapsulation it is a tool that allows developers to overcome DOM encapsulation
+the shadow dom is a browser technollogy designed primarily for scoping variables and css in web components the virtual Dom is a concept implemented by librarires in js on top of the browser APIs
+
+"useMemo"
+will only recompute the memoizedvalue. when only one dependencies has changed 
+ the opitimazation to help the  expensive calculations on every render
+ 
+performance  optimization
+
+"FloraSaint"
+
+'" 
+ Synthetic sugars""
+
+ 
+
+" React JSX is syntactic sugar for creating DOM elements using Javascript. It essentially outputs HTML in the document.
+
+The browser understands only HTML to provide the visual representation to the user. The browser can't do that with JavaScript alone."
+
+
+What is Node js
+Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.
+ Asynchronus, Very Fast, single Threaded but Highly Scalable
+No Buffering, License
+
+Local Scope and Functions
+Variables which are declared within a function, as well as the function parameters, have local scope. That means they are only visible within that function.
+
+"child to parent Callback"
+In the parent component, create a callback function. This callback function will retrieve the data from the child component.
+Pass the callback function to the child as a props from the parent component.
+The child component calls the parent callback function using props and passes the data to the parent component.

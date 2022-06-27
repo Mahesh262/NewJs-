@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<meta name="viewport" content="width=device-width" intital-scale="1">
+<style>
+*{
+box-sizing:border-box;
+}
+body{
+background:#ccc;
+margin:0;
+}
+.header{
+font-size:32px;
+text-align:center;
+color:#ddd;
+padding:5px 22px;
+background-color:green;
+}
+.top{
+background-color:black;
+display:flex;
+padding:22px;
+}
+.top a{
+background-color:black;
+margin:6px;
+color:white;
+text-align:center;
+}
+.top a:hover{
+background-color:white;
+color:black;
+}
+.row{
+display:flex;
+flex-wrap:wrap;
+}
+.side{
+flex:30%;
+padding:12px;
+background-color:#ddd;
+}
+.main{
+flex:70%;
+padding:20px;
+background-color:#eee;
+}
+.footer{
+width:100%;
+background-color:green;
+color:white;
+text-align:center;
+padding:15px;
+}
+.fakeimg{
+width:100%;
+padding:22px;
+}
+@media screen and(max-width:700px)
+.main, .top {
+flex-direction:column;
+}
+}
+@media screen and(max-width:600px)
+.main,.top{
+flex-direction:row;
+}
+}
+</style>
+</head>
+</body>
+<div class="header">
+<h1> Welcome TO Flex</h1>
+</div>
+<div class="top">
+<a href="#">LINK1</a>
+<a href="#">LINK2</a>
+<a href="#">LINK3</a>
+</div>
+<div class="row">
+<div class="side">
+<h2>sidehead</h2>
+<div class="fakeimg" style="height:200px;">Image</div><br>
+<div class="side">
+<div class="fakeimg" style="height:60px;">Image</div><br>
+<div class="fakeimg" style="height:60px;">Image</div><br>
+<div class="fakeimg" style="height:60px;">Image</div>
+</div>
+</div>
+<div class="main">
+<h2>MAinHEad</h2>
+<div class="fakeimg" style="height:200px;">IMage</div>
+<h3>SOme text here ...</h3>
+<p>Sunt in culpa qui officia deserunt mollit anim 
+id est laborum consectetur adipiscing elit, sed do 
+eiusmod tempor incididunt ut labore et dolore magna
+ aliqua. Ut enim ad minim veniam, quis nostrud
+ exercitation ullamco</p>
+ <br>
+<h2>MAinHEad</h2>
+<div class="fakeimg" style="height:200px;">IMage</div>
+<h5>SOme text here ...</h5>
+<p>Sunt in culpa qui officia deserunt mollit anim 
+id est laborum consectetur adipiscing elit, sed do 
+eiusmod tempor incididunt ut labore et dolore magna
+ aliqua. Ut enim ad minim veniam, quis nostrud
+ exercitation ullamco</p>
+ </div>
+ </div>
+ <div class="footer">
+ <h2>FOOTER</h2>
+ </body>
+ </html>

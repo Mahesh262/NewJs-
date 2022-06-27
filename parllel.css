@@ -1,0 +1,95 @@
+*{
+    margin:0px
+    padding:opx;
+    box-sizing:border-box;
+    /*border:2px solid green;*/
+}
+body,html{
+    background: #869686;
+    text-align: center;
+    height:100%;
+    margin:0;
+    font-size:16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-transform:uppercase;
+    line-height:1.2rem;
+    word-spacing: 8;
+
+}
+.pic1, .pic2, .pic3,.pic {
+    opacity: .3;
+    background-position:center;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+   
+.pic{
+    background:url(newpic/forest.jpg);
+    min-height:100%;
+
+}
+.pic1{
+    background:url(newpic/hil.jpg);
+    min-height:400px;
+    
+}
+.pic2{
+    background:url(farm.jpg);
+    min-height:400px;
+}
+.pic3{
+    background:url(newpic/house.jpg);
+    min-height:400px;
+    
+}
+.light{
+     background:rgb(243, 201, 172);
+     color:black;
+    
+    
+}
+.dark{
+
+    background:black;
+    color:white;
+   
+}
+.none{
+     
+    background: black;
+    color:white;
+   
+
+    
+}
+ *{
+     background-attachment: fixed;
+
+ }
+ .txt{
+     top:50%;
+     position: absolute;
+     width:100%;
+     text-align:center;
+     
+    
+     
+ }
+ .bor{
+      padding:22px;
+      font-size:25px;
+      color:white;
+      background:olivedrab;
+      border-collapse: collapse;
+
+ }
+.section{
+    padding:100px 40px;
+    text-align:center;
+}
+.tran{
+    background:transparent;
+
+}

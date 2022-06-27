@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .invalid{
+          color: red;
+        
+        }
+        .valid{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <form  class = "myform" onsubmit = 'myf()'>
+    <input type = 'text' name = "username" id = "user" placeholder=" "  pattern = "[A-Za-z]{6,12}"  autofill = "off"required>
+    <button class = "submit">submit</button>
+    </form>
+    <div id = "message">
+        <p id = "letter" class = "invalid"><b>small case</b></p>
+        <div id = "uppercase" class = "invalid"><b>Upper case</b></div>
+    
+    </div>
+    <script>
+      
+         let usr = document.getElementById("user")
+         let fms = document.querySelector('.myform')
+    function myf(){
+        document.getElementById("message").style.color = "green"
+    }
+       
+         document.querySelector('.myform').addEventListener("submit",function(e){
+             e.preventDefault()
+             console.log(e.target.user.value)
+             e.target.user.value = '';
+
+         })
+    
+    </script>
+</body>
+</html>

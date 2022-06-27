@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ='stylesheet' href="./Assign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="row mt-5">
+      <div class="col-5" id="contact">
+          <img src="https://cdn.pixabay.com/photo/2015/10/31/12/07/business-card-1015417__340.jpg" alt ="contact" width="100%" height="300px"/>
+      </div>
+      <div class="col-7" id ="headers">
+         <div class="row pt-3" id="header1">
+          <span class="col-8 "><h1 class="btn justify-content-center bg-info">Header 1</h1></span> 
+          <span class="col-1"><p>?</p></span>   
+          <span class="col-2"><p id ="time"></p></span>   
+          <span class="col-1"><p>0</p></span>   
+        </div>
+        <div class="row pt-3" id="header3">
+            <span class="col-5"style="text-align: end;"><h2 class="btn justify-content-center bg-success">Header2</h2></span>
+            <span  class="col-5"><h3 class="btn justify-content-center bg-success">Header 3</h3></span>
+            <span  class="col-2"><p>
+          <img src="https://cdn.pixabay.com/photo/2015/10/31/12/07/business-card-1015417__340.jpg" alt ="contact" width="100%" height="100%"/>
+
+            </p></span>
+        </div>
+        <div class="row pt-3" id="header4">
+            <span class="col-10"><h4 class="btn justify-content-center bg-warning">Header4</h4></span>
+            <span class="col-2" ><p>
+                <i class="fa fa-youtube-play" id="icon" style="font-size:50px ;color:rgba(0, 0, 255, 0.747)"></i>
+            </p></span>
+        </div>
+      </div>
+    </div>
+    <script>
+        const  d=  new Date();
+        let times = d.toLocaleTimeString('it-It');
+        document.getElementById('time').innerHTML=times
+    </script>
+</body>
+</html>

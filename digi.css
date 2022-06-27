@@ -1,0 +1,74 @@
+body{
+background:#ccc;
+margin:0px;
+}
+.banner{
+	width:100%;
+	height:100vh;
+	background-image:url(farm.jpg);
+	position:relative;
+	background-size:cover;
+	background-position:center;
+}
+
+.header{
+	font-size:16px;
+	left:55%;
+	top:50%;
+	color:white;
+	text-transform:uppercase;
+	position:absolute;
+	transform:translate(-50%,-50%);
+}
+ button {
+	border:2px solid linear-gradient(to right,red,pink);
+	width:100px;
+	padding:9px 0px;
+	position:relative;
+	float:left;
+	margin:12px;
+	color:red;
+	text-align:center;
+	border-radius:44px;
+	background:transparent;
+	cursor:pointer;
+	overflow:hidden;
+}
+span{
+	background:#91eae4;
+	height:100%;
+	width:0%;
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	transition:0.5s;
+	z-index:-1;
+	}
+button:hover span{
+	width:100%;
+}
+button:hover span{
+	border:none;
+}
+.col1{
+	color:linear-gradient(to right,#91eae4,#e491ea,green);
+	text-transform:uppercase;
+}
+.nav {
+	width:100%;
+	background:tansparent;
+overflow:auto;
+}
+.nav a{
+	float:right;
+	width:15%;
+	list-style:none;
+	list-style-type:none;
+	font-size:11px;
+	padding:22px;
+	margin:2px;
+}
+.nav a:hover{
+background-color:linear-gradient(to right,#91eae4,#e491ea,green);
+color:white;	

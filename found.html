@@ -1,0 +1,186 @@
+--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .articals {
+            width: 100vh;
+            background: rgba(165, 42, 42, 0.856);
+
+        }
+
+        .card {
+            display: flex;
+
+        }
+
+        #message1,
+        #message2 {
+            color: green;
+        }
+
+        #card img {
+            width: 250px;
+            background-size: cover;
+            border: 2px solid green;
+        }
+
+        .inputs {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="articals">
+            <div id="card">
+                <img src="swan.jpg" alt="ae" id="imgs1">
+                <div class="prod">
+                    <h3 class="tit" id="brand1">Nike</h3>
+                    <h4 id="price1">19.99</h4>
+                    <h4>$</h4>
+                </div>
+                <div class="inputs">
+                    <input type="number" id="quantity1" name="quantity1" min="1" max="2" value="1">
+                    <select class="size1" id="size1" name="size1" onclick="deleteE('message1')">
+                        <option value="size" disabled selected>size</option>
+                        <option value="XL">XL</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XS">XS</option>
+                    </select>
+                    <div>
+                        <button class="addTo" onclick="add(1)">ADD</button>
+                    </div>
+                </div>
+                <p id="message1"></p>
+            </div>
+            <!-- card1 -->
+            <div id="card">
+                <img src="lions.jpg" alt="ae" id="imgs2">
+                <div class="prod">
+                    <h3 class="tit" id="brand2">rames</h3>
+                    <h4 id="price2">19.99</h4>
+                    <h4>$</h4>
+                </div>
+                <div class="inputs">
+                    <input type="number" id="quantity2" name="quantity2" min="1" max="2" value="1">
+                    <select class="size2" id="size2" name="size2" onclick="deleteE('message2')">
+                        <option value="size" disabled selected>size</option>
+                        <option value="XL">XL</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XS">XS</option>
+                    </select>
+                    <div>
+                        <button class="addTo" onclick="add(2)">ADD</button>
+                    </div>
+                </div>
+                <p id="message2"></p>
+            </div>
+            <div id="card">
+                <img src="lions.jpg" alt="ae">
+                <div class="prod">
+                    <h3 class="tit" id="brand3">esers</h3>
+                    <h4 id="price3">19</h4>
+                    <h4>$</h4> -->
+                </div>
+                <div class="inputs">
+                    <input type="number" id="quantity3" name="quantity3" min="1" max="2" value="1">
+                    <select class="size3" id="size3" name="size3" onclick="deleteE('message3')">
+                        <option value="size" disabled selected>size</option>
+                        <option value="XL">XL</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XS">XS</option>
+                    </select>
+                    <div>
+                        <button class="addTo" onclick="add(3)">ADD</button>
+                    </div>
+                </div>
+                <p id="message3"></p>
+            </div>
+        </div>
+        <div class="cart">
+            <h3 class="tit">order details</h3>
+            <ul id="items">
+            </ul>
+            <h3 id="total" style="text-align:right;">Total:0$</h3>
+        </div>
+    </div>
+    <script>
+        var total = 0;
+        var i = 1;
+        var itemCost = [];
+        var message = "please select a size"
+
+        function add(n) {
+            sizeId = "size" + n;
+            messageId = "message" + n;
+            size = document.getElementById(sizeId).value;
+            if (size === "size") {
+                document.getElementById(messageId).innerHTML = message;
+                return 0;
+            }
+            brand = "brand" + n;
+            console.log(brand)
+            priceId = "price" + n;
+            quantityId = "quantity" + n;
+            imgs = "imgs" + n
+            name = document.getElementById(brand).innerHTML;
+            console.log(imgs)
+            price = document.getElementById(priceId).innerHTML;
+            quantity = document.getElementById(quantityId).value;
+            path = document.getElementById(imgs)
+            console.log(path)
+            var node = document.createElement('Li')
+            item = "item" + i;
+            node.setAttribute('id', item);
+            // console.log(item)
+            itemCost[i - 1] = Number(price) * Number(quantity);
+            i += 1;
+            var ime = document.createElement('img')
+            var res = path.cloneNode(true)
+            ime.appendChild(path)
+            var textnode = document.createTextNode(ime + "" + name + "" + quantity + "X" + price + "$, size:" + size)
+            //     node.appendChild(textnode);
+            document.getElementById("items").appendChild(node);
+            total += Number(price) * Number(quantity);
+            document.getElementById('total').innerHTML = "Total:" + total.toFixed(2) + "$";
+            document.getElementById(item).innerHTML += '<button onclick = "deleItem(' + "'" + item + "'" +
+                ')">x</button>';
+        }
+
+        function deleteE(eId) {
+            document.getElementById(eId).innerHTML = '';
+            console.log(eId)
+        }
+
+        function deleItem(eId) {
+            document.getElementById(eId).remove();
+            console.log(document.getElementById(eId).remove())
+            n = Number(eId.slice(-1)) - 1;
+            total -= itemCost[n]
+            document.getElementById('total').innerHTML = "Total:" + total.toFixed(2) + "$,size" + size
+        }
+    </script>
+</body>
+
+</html> -

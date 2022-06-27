@@ -1,0 +1,9 @@
+*{
+box-sizing: border-box;
+}
+#logo{
+    color: #27A365;
+    text-transform: uppercase;
+    font-size: larger;
+    
+}

@@ -1,0 +1,22 @@
+.img{
+    height: 440px;
+    width: 1440px;
+    left: 0px;
+    top: 72px;
+    border-radius: 0px;
+
+}
+#col{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid green;
+}
+.posts::after{
+    content: '';
+    position: absolute;
+    display: inline-flex;
+    border: 1px solid black;
+    background-color: black;
+    width:100px;
+}
+

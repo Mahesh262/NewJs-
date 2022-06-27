@@ -1,0 +1,164 @@
+
+*{
+    box-sizing: border-box;
+ /* border: 2px solid green;     */
+
+}
+
+
+
+ .andriod{
+height: 1608px;
+width: 360px;
+left: -2464px;
+top: -1423px;
+border: 2px solid green;
+border-radius: 0px;
+background: #FFFFFF;
+overflow: hidden;
+/* color:pink */
+
+}
+.group4{
+ height: 24px;
+width: 360px;
+left: 0;
+top: 0px;
+border-radius: 0px;
+left:0px;
+top:0px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+position: relative;
+background: #F8F9FA;
+
+}
+
+.group3{
+height: 10px;
+width: 51px;
+position: absolute;
+left: 297px;
+border-radius: 0px;
+top: 7px;
+display: flex;
+flex-direction:row;
+justify-content: space-evenly;
+align-items: center;
+
+}
+.rec4,.oval,.poly{
+   
+ height: 10px;
+width: 10px;
+left: 297px;
+top: 6.9998779296875px;
+border-radius: 0px;
+left: 297px;
+top: 7px;
+
+}
+#rectangle{
+height: 236px;
+width: 360px;
+left: 0px;
+border-radius: 0px;
+/* background: linear-gradient(); */
+ background:url('https://cdn.pixabay.com/photo/2015/01/09/02/45/laptop-593673_960_720.jpg');
+ background-size:cover;
+ background-position: center;
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+
+}
+#joingroup{
+    height: 28px;
+width: 96px;
+left: 256px;
+top: 38px;
+position: absolute;
+border-radius: 4px;
+font-family: IBM Plex Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0em;
+text-transform: capitalize;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #FFFFFF;
+border: 1px solid #f8f9fae0;
+text-align: left;
+} 
+#join2{
+  height: 24px;
+width: 24px;
+left: 16px;
+top: 40px;
+position: absolute;
+border-radius: 0px;
+}
+#Messagebox span {
+    height: 22px;
+    width: 179px;
+    position: absolute;
+    left: 16px;
+    margin-top: 160px;
+    border-radius: nullpx;
+}
+#smalltext{
+ height: 16px;
+ position: absolute;
+width: 218px;
+left: 16px;
+top: 212px;
+border-radius: nullpx;
+font-family: IBM Plex Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+}
+#footerone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top:20px;
+}
+
+#footerone span{
+    width: 73px;
+    height: 18px;
+    left: 16px;
+    top: 282px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    
+    color: #212529;  
+}
+.rec5{
+
+    padding-top: 20px;
+width: 360px;
+height: 120px;
+left: 0px;
+top: 326px;
+background: url('https://images.freeimages.com/images/large-previews/d3c/mountains-1362605.jpg'), #C4C4C4;
+background-size: cover;
+background-position: center;
+border-radius: 4px 4px 0px 0px;
+
+}

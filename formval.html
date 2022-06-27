@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>partice</title>
+    <link rel="stylesheet" href ="styling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class = "container">
+        <div class = "firstone">
+            <h1>Header</h1>
+            <div class = "serch">
+                <p><i id = "icons" class="fa fa-home" style = "width:20px"></i></p>
+            </div>
+            <ul>
+                <div class = "menulist">
+
+                    <li class= "subli"><i id = "opening" class="fa fa-home">Menu</i>
+                        <i  id ="icons"class='fas fa-align-justify'>=</i>
+                        <ul>
+                            <div class="menubar"
+                                <li class = "items"><a href="#">Registar</a></li>
+                                <li class = "items"><a href="#">HOME</a></li>
+                                <li class = "items"><a href="#">login</a></li>
+                                <li class = "items"><a href="#">HOME</a></li>
+                        </div> 
+                            </ul>
+                           
+                  
+                </li>
+                </div>
+            </ul>
+        </div>
+        <div class  = "contentpage">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+               <br> Ab suscipit neque quo quas dolore voluptas rem quis vitae asperiores distinctio,
+                <br> vel cumque, corporis consequatur nemo temporibus hic qui mollitia nam!</p>
+                    
+               <div class = "searchbix">
+                   <div class = "search">
+                       <div class = "picer">
+                        <div class = "se">
+                            <i class="fa fa-search" style = "color:blue"></i>
+                        </div>
+                       </div>
+                       <div class = "input">
+                           <input type = "text"  id = "xbit"value = "" placeholder="search"/>
+                       </div>
+                      <div class="insider"> welocome<i class="fa fa-search" style = "color:blue"></i></div>
+
+                   </div>
+                   <div class="circle">
+                    
+                    <!-- Show number of percentages -->
+                    
+                    <div class="circle__percentages">
+
+                    <p>100%</p>
+                    </div>
+                    <div class="circle__percentages">
+
+                        <p>100%</p>
+                        </div>
+                        <div class="circle__percentages">
+
+                            <p>100%</p>
+
+                            </div>
+                            
+                  
+                    </div>
+                </div>
+               </div>
+               <div  class = "contentlist">
+                   <div class = "products" id = "products">
+                    <a hreft = "javascript :void(0)" class = "closebtn" onclick="onclosenav()">X</a>
+                        <a href = "#">apple store
+                        <i class="fa fa-twitter" style = " color:rgb(68, 68, 221)"></i>
+
+                        </a>
+                        <a href = "#" >apple store
+                        <i class="fa fa-google" style = " color:rgb(68, 68, 221)"></i>
+
+                        </a>
+                        <a href = "#">apple store
+                        <i class="fa fa-linkedin" style = " color:rgb(68, 68, 221)"></i>
+
+                        </a>
+                        <a href = "#"> Apple
+                        <i class="fa fa-facebook" style = " color:rgb(68, 68, 221)"></i>
+                    </a>
+                   </div>
+                  <div class = "prodcthome" id = "producthome">
+                      <button class = "openbtn" onclick="opennav()">☰ </button>
+
+                  </div>
+               </div>
+            
+        </div>
+
+    </div>
+ <script>
+     let icon = document.getElementById("opening")
+     let closer= document.querySelector(".menubar")
+    closer.style.display = "none"
+      icon.addEventListener("click", e => {
+          if(closer.style.display == "none"){
+              closer.style.display = 'block'
+
+          }else {
+              closer.style.display = "none"
+          }
+      })
+
+      
+ </script>
+ <script>
+      let seac = document.querySelector(".search")
+     let insidr = document.querySelector(".insider")
+    
+    insidr.onclick = function (){
+        if(insidr.style.display = "block"){
+            seac
+        }
+
+    }
+      seac.onclick = function (){
+          if(seac.style.display = "none"){
+          seac.style.display = 'none'
+      }
+       
+    }
+    //  let ic = document.querySelector(".searchbix")
+
+    //  ic.onclick = ()=>{
+    //  ic.classlist.toggle('.active')
+
+    
+ </script>
+ <script>
+ function onclosenav(){
+    
+    let cb = document.getElementById("products").style.width ="0px"
+//  let opne = document.getElementById("producthome").style.marginLeft = "0px"
+
+ }
+ function opennav(){
+    
+    let op= document.getElementById("products").style.width ="250px"
+//  let  opr = document.getElementById("producthome").style.marginLeft = "250px"
+
+ }
+
+ 
+ 
+ </script>
+</body>
+</html>

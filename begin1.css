@@ -1,0 +1,75 @@
+*{
+margin:0px;
+padding:0px;
+}
+body{
+background:#CCC;
+}
+.heading{
+width:100%;
+height:100vh;
+background-image:linear-gradient(rgba(4,20,32,0.7),rgba(4,20,32,0.7)),url(forest.jpg);
+background-size:cover;
+background-position:center;
+}
+.
+nav{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:2%,6%;
+}
+nav img{
+	width:100px;
+}
+.menubar{
+	flex:1;
+	text-align:right;
+}
+.menubar ul li {
+	position:relative;
+	list-style:none;
+	display:inline-block;
+	padding:16px;
+}
+.menubar ul li a {
+	text-decoration:none;
+	color:white;
+}
+.menubar ul li ::after{
+	content:'';
+	width:0;
+	height:2px;
+	margin:auto;
+	display:block;
+	background:orange;
+	color:tomato;
+	transition:0.5s;
+	}
+.menubar ul li:hover ::after{
+	width:100%;
+	display:hidden;
+	}
+	.text-area{
+		text-align:center;
+		padding-top:16px;
+		}
+	.text-area h1{
+		color:white;
+		padding:16px;
+		font-size:60px;
+	}
+	.text-area p{
+		color:white;
+		padding-top:10px;
+	}
+	.herbtn{
+		width:200px;
+		padding:22px;
+	    text-align:center;
+		color:white;
+		border:1px solid green;
+		text-decoration:none;
+		border-radius:5%;
+	
+	}

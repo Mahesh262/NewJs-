@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>weblayout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=display-width intial-scale=1">
+<style>
+body{
+margin:0px;
+}
+*{
+box-sizing:border-box;
+}
+.header{
+text-align:center;
+background-color:gray;
+padding:25px;
+}
+.topnav{
+overflow:hidden;
+background-color:pink;
+}	
+.topnav a{
+background-color:pink;
+display:inline;
+float:left;
+color:white;
+padding:8px;
+text-decration:none;
+text-align:center;
+border-radius:4px;
+width:10%;
+}
+.topnav a:hover{
+background-color:black;
+color:white;
+}
+.column{
+padding:22px;
+width:33.333%;
+background-color:cyan;
+text-align:left;
+float:right;
+margin-top:0px;
+}
+.row{
+padding:22px;
+}
+.row::after{
+content:"";
+display:table;
+clear:both;
+}
+@media screen and(max-width:600px){
+.column{
+width:100%;
+}
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Heading</h1>
+</div>
+<div class="topnav">
+<a href="#">Link1</a>
+<a href="#">Link2</a>
+<a href="#">Link3</a>
+</div>
+<div class="row">
+<div class="column">
+<h2>column</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+</p></div>
+<div class="column">
+<h2>column</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+</p></div>
+<div class="column">
+<h2>column</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+box-sizing:border-box;
+}
+body{
+width:100%;
+background:#eee;
+}
+.column{
+float:left;
+display:flex;
+flex-direction:column;
+width:25%;
+justify-content:center;
+padding:0px 22px;
+gap:.2rem;
+background:linear-gradient(to right,#91eae4,#e491ea);
+broder-gap:22px;
+}
+.card{
+background:linear-gradient(to right,#97ea91,#e491ea);;
+text-align:center;
+color:tomato;
+height:auto;
+border-radius:44px;
+
+}
+.row{
+margin:0px -5px;
+padding:44px;
+}
+.footer{
+width:25%;
+back-ground:pink;
+border-radius:90%;
+}
+.new_pic{
+border-radius:50%;
+}
+
+.row:after{
+content:"";
+display:table;
+clear:both;
+}
+</style>
+<body>
+<div class="row">
+<div class="column">
+<div class="card">
+<img src="pic4.jpg" alt="M" style="width:100%;">
+<h2> card1</h2>
+<div class="footer">
+<img src="pic4.jpg" alt="new" class="new_pic" style="width:100%;">
+</div>
+<div class="tag">
+<h5>LIVE</h5>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="card">
+<img src="pic2.jpg" alt="o" style="width:100%;">
+<h2> card2</h2>
+<div class="footer">
+<img src="pic2.jpg" alt="new" class="new_pic" style="width:100%;">
+</div>
+<div class="tag">
+<h5>LIVE Ago</h5>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="card">
+<img src="pic3.jpg" alt="n" style="width:100%;">
+<h2> card3</h2>
+<div class="footer">
+<img src="pic3.jpg" alt="new" class="new_pic" style="width:100%;">
+</div>
+<div class="tag">
+<h5>LIVE</h5>
+</div>
+</div>
+</diV>
+<div class="column">
+<div class="card">
+<img src="pic5.jpg" alt="l" style="width:100%;">
+<h2> card4</h2>
+<div class="footer">
+<img src="pic5.jpg" alt="new" class="new_pic" style="width:100%;">
+</div>
+<div class="tag">
+<h5>LIVE</h5>
+</diV>
+</div>
+</div>
+</div>
+</body>
+</html>

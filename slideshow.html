@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        position: relative;
+        background: grey;
+        align-items: center;
+    }
+
+    .slides {
+        display: flex;
+        border: 2px solid green;
+        height: 50vh;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    button {
+        position: absolute;
+        transform: translate(50px, -150px);
+
+    }
+
+    .dots {
+        left: 50%;
+    }
+
+    .active {
+        color: green;
+        background: pink;
+    }
+
+    .prev {
+        right: 120px;
+    }
+
+    .slide1 {
+        display: flex;
+        border: 2px solid red;
+        width: 300px;
+        position: absolute;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="slides" id="slider">
+            <div class="slide1">
+                <p> slide1</p>
+            </div>
+            <div class="slide1">
+                <p> slide2</p>
+            </div>
+            <div class="slide1">
+                <p> slide3</p>
+            </div>
+        </div>
+        <button onclick="bttn(1)" class="prev">prev</button>
+        <button onclick="bttn(-1)" class="next">next</button>
+        <div>
+            <span class="dots" onclick="plusone(1)">1</span>
+            <span class="dots" onclick="plusone(1)">2</span>
+            <span class="dots" onclick="plusone(1)">3</span>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showslides(slideIndex);
+
+        function bttn(n) {
+            showslides(slideIndex += n)
+        }
+
+        function plusone(n) {
+            showslides(slideIndex += n)
+        }
+
+
+        function showslides(n) {
+            let slides = document.getElementsByClassName('slide1')
+            let dots = document.getElementsByClassName('dots')
+            // console.log(dots)
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace('active', '')
+
+            }
+            slides[slideIndex - 1].style.display = "block"
+
+            dots[slideIndex - 1].className += ' active'
+        }
+        // function showslides(n) {
+        //     let slides = document.getElementsByClassName('slide1')
+        //     let dot = document.getElementsByClassName('dots')
+        //     if (n > slides.length) {
+        //         slideIndex = 1
+        //     }
+        //     if (n < 1) {
+        //         slideIndex = slides.length
+        //     }
+        //     for (let i = 0; i < slides.length; i++) {
+        //         slides[i].style.display = "none"
+        //     }
+        //     for (let i = 0; i < dot.length; i++) {
+        //         dot[i].className = dot[i].className.replace('replace', '')
+        //     }
+
+        //     slides[slideIndex - 1].style.display = "block"
+        //     dot[slideIndex - 1].className += "active"
+        // }
+    </script>
+</body>
+
+</html>

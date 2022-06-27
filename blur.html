@@ -1,0 +1,14 @@
+<html>
+<body>
+  <p><strong>SVG types</strong></p>
+  <svg width="400" height="250">
+    <defs>
+      <filter id="f1" X="0" Y="0">
+        <feGaussianBlur in="sourceGraphic" stdDeviation="25" />
+      </filter>
+    </defs>
+    <rect width="290" height="150" stroke="red" stroke-width="23" stroke-height="24" fill="yellow" filter="url(#f1)" />
+  </svg>
+
+</body>
+</html>

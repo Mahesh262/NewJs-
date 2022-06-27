@@ -1,0 +1,142 @@
+<!DOCTyPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            width:100%;
+            
+        }
+        .container{
+            position:relative;
+              width : 100%;
+              height:100vh;
+                 display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(175, 106, 240);
+
+        }
+        .content{
+             display: flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            
+            overflow: hidden;
+            background-color: rgb(252, 187, 164);
+        }
+            
+        
+        .slider{
+           width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border :2px solid green;
+            align-items: center; 
+             animation-name: fade-in;
+             animation-duration: 0.5s;
+            transition:  0.5s ;
+        }
+        @keyframes fade-in{
+            0%{opacity: 0;}
+            0%{opacity: .4;}
+            0%{opacity: 1;}
+        }
+        section img{
+            width:400px;
+        
+
+        }
+        .arrow_right,.arrow_left{
+
+           position: absolute;
+           border: 2px solid red;
+            top :50%;
+
+        }
+        .arrow_right{
+            
+            position: absolute;
+            color :green;
+            right:50px;
+            
+            
+        }
+       
+        .arrow_left{
+            color : green;
+            position: absolute;
+           left: 12px;
+             
+        }
+        .slider{
+            display: none;
+        }
+        .section img :hover{
+            opacity: .5;
+            background:rgb(94, 240, 240);
+        }
+
+        
+    </style>
+    
+</head>
+<body>
+    <div class = "container">
+    <div class="content">
+        <div class = "slider">
+            <section><img src = "farm.jpg"></section>
+        </div>
+        <div class = "slider"><section><img src = "flowers.jpg"></section>
+        </div>
+        <div class = "slider"><section><img src = "field.jpg"></section>
+        </div>
+        <div class = "slider">
+             <section><img src = "forest.jpg"></section>
+          
+        </div>
+    </div>
+    <span class = "arrow_left" onclick= "control(1)">left</span>
+   
+    <span class = "arrow_right" onclick ="control(-1)">right</span>
+    </div>
+    <script>
+        let flag = 0;
+        function control(n){
+          flag = flag + n;
+          showSlides(flag);
+        }
+
+    function showSlides(num){
+        let x = document.getElementsByClassName("slider");
+       if(num == x.length){
+           flag = 0;
+           num = 0;
+
+       }
+       if (num < 0){
+           flag = x.length-1;
+           num = x.length-1;
+       }
+        for (let y of x){
+            y.style.display ="none"
+
+        }
+        x[num].style.display = "block" ;
+        x[num].style.transition= " all 0.5s linear"
+    
+    
+    }
+    showSlides(flag);
+    </script>
+</body>
+</html>

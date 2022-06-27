@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.body{
+margin:25px;}
+.container{
+position:relative;
+width:50%;
+}
+.img{
+display:block;
+width:100%;
+height:auto;
+}
+.overlay{
+top:0;
+bottom:100%;
+right:0;
+position:absolute;
+left:0px;
+width:100%;
+height:0;
+overflow:hidden;
+transition:.2s ease;
+background-color:green;
+}
+.text{
+top:50%;
+white-space:nowwrap;
+color:white;
+left:50%;
+overflow:hidden;
+font-size:20px;
+transform:(-50px,-50px);
+-ms-transform:(-50px,-50px);
+position:absolute;
+}
+.container:hover .overlay{
+height:100%;
+bottom:0;
+}
+
+</style>
+<body>
+<div class="container">
+<img src="forest.jpg" alt="rooes" class="img"></img>
+<div class="overlay">
+<div class="text">HEllO world</div>
+</div>
+</div>
+</body>
+</html>

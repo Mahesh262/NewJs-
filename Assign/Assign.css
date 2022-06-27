@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+}
+#contact{
+    border: 2px solid green;
+}
+#contact img {
+    background-size: cover;
+    background-position: center;
+}
+#contact img:hover{
+    transform: scaleX(1.3);
+}
+#headers{
+    border: 2px solid pink;
+}
+#header3{
+    border: 2px solid saddlebrown ;
+    display: flex;
+    align-items: center;
+}
+
+#header4{
+    display: flex;
+    align-items: center;
+
+}
+#header4 img {
+    color: rgba(255, 0, 0, 0.712);
+}
+#header1{
+    border: 2px solid red;display:flex;justify-content: center;align-items: center;text-transform: capitalize;
+    display: flex;
+    text-align: center;
+}
+#icon{
+    transition: 1s;
+}
+#icons:hover{
+    padding-top: 10px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang=eng>
+<head>
+<style>
+    .container{
+        display:grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 200px 200px 300px;
+        padding:10px;
+        background-color: aqua;
+    
+
+        row-gap:20px;
+       
+        column-gap:20px ;
+    
+        align-content:start;
+        overflow: hidden;
+
+    }
+    .container > div{
+        background-color: blueviolet;
+        border:2px solid gray;
+        
+        width:100%;
+    }
+        .p{
+        grid-area: 1/2/3/4;
+        text-align:center;
+        
+
+        }
+        .p img {
+            background-size: cover;
+            width:100%;
+            background-position: center;
+            box-sizing: border-box;
+        }
+    
+</style>
+</head>
+<body>
+<section class="container">
+    <div class="p">
+          
+            <img src="newpic/forest.jpg" alt="fr" >
+            <h1>c1</h1>
+    </div>
+    <div class="q">
+            <img src="newpic/forest.jpg" alt="fr" style="width:200px;">
+            <h1>c1</h1>
+        </div>
+    
+     <div class="r">
+            <img src="newpic/forest.jpg" alt="fr" style="width:200px;">
+            <h1>c1</h1>
+        </div>
+        <div class="s">
+            <img src="newpic/forest.jpg" alt="fr" style="width:200px;">
+            <h1>c1</h1>
+        </div>
+        <div class="t">
+            <img src="newpic/forest.jpg" alt="fr" style="width:200px;">
+            <h1>c1</h1>
+        </div>
+
+    
+        <div class="u">
+            <img src="newpic/forest.jpg" alt="fr" style="width:200px;">
+            <h1>c1</h1>
+        </div>
+                
+        <div class="v">      
+                <img src="newpic/forest.jpg" alt="fr" style="width:200px;">
+                <h1>c1</h1>
+            </div>
+            <div class="w">
+                    <img src="newpic/forest.jpg" alt="fr" style="width:200px;">
+                    <h1>c1</h1>
+                </div>
+                
+</section>

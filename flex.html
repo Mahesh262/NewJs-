@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+box-sizing:border-box;
+}
+body{
+margin:0;
+font-family:Arial;
+}
+.header{
+text-align:center;
+color:#ccc;
+padding:32px;
+}
+.column{
+max-width:25%;
+padding:0 4px;
+}
+.row{
+display: flex;
+max-width:25%;
+flex-wrap: wrap;
+padding:0px 4px;
+}
+.column img{
+margin-top:8px;
+vertical-align: middle;
+}
+@media and screen(max-width:800px){
+.column {
+flex:50%;
+max-width:50%;
+}
+}
+@media and screen (max-width:600px){
+.column {
+flex:100%;
+max-width:100%;
+}
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1> Responsive</h1>
+</div>
+<div class="row">
+<div class="column">
+<img src="lions.jpg" style="width:100%">
+<img src="pic2.jpg" style="width:100%">
+<img src="pic.jpg" style="width:100%">
+<img src="forest.jpg" style="width:100%">
+<img src="flowers.jpg" style="width:100%">
+</div>
+<div class="column">
+<img src="pic3.jpg"  style="width:100%">
+<img src="swan.jpg"  style="width:100%">
+<img src="pic4.jpg"  style="width:100%">
+<img src="pic5.jpg"  style="width:100%">
+<img src="pic6.jpg"  style="width:100%">
+</div>
+<div class="column">
+<img src="forest.jpg"  style="width:100%">
+<img src="pic2.jpg"  style="width:100%">
+<img src="pic3.jpg"  style="width:100%">
+<img src="pic5.jpg"  style="width:100%">
+<img src="lions.jpg"  style="width:100%">
+</div>
+<div class="column">
+<img src="pic2.jpg"  style="width:100%">
+<img src="pic6.jpg"  style="width:100%">
+<img src="pic3.jpg"  style="width:100%">
+<img src="pic4.jpg"  style="width:100%">
+<img src="pic.jpg"  style="width:100%">
+</div>
+</div>
+</body>
+</html>

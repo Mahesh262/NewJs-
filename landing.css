@@ -1,0 +1,259 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    /*border:2px solid green;*/
+}
+body{
+    background:#ddd;
+
+}
+.main{
+    width:100%;
+}
+.banner{
+    text-align:center;
+    justify-content:center;
+
+}
+   
+.banner h1{
+     text-align:center;
+     font-size:50px;
+     color:white;
+     padding:15px;
+}
+.banner h1{
+background:url(newpic/forest.jpg);
+min-height:400px;
+width:100%;
+background-position:center;
+background-size:cover;
+}
+.banner img{
+    height:100px;
+    width:100px;
+    float:left;
+    position:relative;
+}
+.banner p{
+    text-align:center;
+    list-style-position: inside;
+     bottom:250px;
+    position:relative;
+    color:white;
+}
+.banner .hero {
+width:100px;
+height: 50px;
+position:relative;
+padding:10px;
+text-decoration:none;
+color:black;
+border: 2px solid grey;
+
+top:50px;
+}
+.hero:hover{
+    background:rgb(70, 62, 62);
+    color:white;
+
+}
+.part2{
+    text-align:center;
+    padding-top:10px;
+
+
+}
+.txt1{
+  text-transform:uppercase;
+  font-weight:300px;
+  font-size:15px;
+  word-spacing:3px;
+  line-height:20px;
+  
+
+}
+.t2{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    padding-top:20px;
+}
+.txt2{
+text-transform:uppercase;
+font-weight:300px;
+font-size:15px;
+word-spacing:3px;
+line-height:20px;
+}
+.part3{
+    display:flex;
+    width:100%;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    padding-top:30px;
+    background:black;
+    margin-top:30px;
+    
+}
+
+
+
+.row::before{
+    display:table;
+    content:"";
+    clear:both;
+}
+
+.cards{
+  width:100%;
+   color:white;
+   text-align:center;
+   height:70%;
+   perspective:1000px;
+   background: #dedede;
+
+
+   
+}
+.innercar{
+    width:100%;
+    height:100%;
+    text-align:center;
+    background:coral;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position:relative;
+    background:linear-gradient(to right,#91eae4,#e491ea);
+box-shadow:0px 4px 8px 0 rgba(0,0,0,0.12);
+}
+
+
+     .cards:hover .innercar{
+    transform: rotateY(180deg);
+     
+}
+
+.front,.backcard{
+    width:100%;
+    height:100%;
+   position:absolute;
+backface-visibility: hidden;
+background:darkgoldenrod;
+}
+.front{
+    background:cyan;
+    color:white;
+
+}
+.backcard{
+    transform: rotateY(180deg);
+    background-color:darkgreen;
+    color:white;
+}
+.backcard  h3 p{
+    text-align:center;
+    
+
+}
+
+.front img {
+    width:300px;
+    background-size:cover;
+    
+}
+ .card1 {
+     width:30%;
+     color:white;
+     text-align:center;
+     height:100%;
+    }
+    .card1 h3{
+        text-align: center;
+    }
+  .card1 img{
+      width:400px;
+  }
+  .card2 {
+    width:30%;
+   color:white;
+    text-align:center;
+    height:70%;
+  }
+  .card2 img{
+    width:400px;
+}
+.part4{
+    padding-top:30px;
+    text-align:center;
+    max-lines:3;
+
+}
+.part4 h4{
+    font-size:50px;
+}
+.part4 p {
+    padding-top:10px;
+    font-weight:300px;
+}
+.part5 {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin-top:30px;
+    text-align:center;
+
+    
+    
+}
+.contact {
+    width:100%;
+    height:100%;
+    padding:67.33px;
+    font-size:20px;
+    background:rgb(55, 150, 228);
+}
+.contact  h3{
+    padding:22px;
+}
+.company {
+    font-size:20px;
+    background:rgba(20, 19, 19, 0.459);
+    color:white;
+    width:100%;
+    padding:45px
+}
+.company  h3{
+    padding:22px;
+}
+footer{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    padding:50px;
+    justify-content: space-around;
+    background:black;
+    color:white;
+}
+.left span {
+    color:cadetblue;
+    font-size:20px;
+    font-weight: bold;
+}
+@media(max-width:800px){
+.section{
+    width:70%;
+
+}
+ .part3{
+     overflow:hidden;
+     width:70%;
+
+ }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+
+        }
+        .automove {
+            position:relative;
+            height: 100vh;
+            left : 50%;
+            transition: ease-in;
+            transition-duration: 0.5s;
+            align-items: center;
+        
+
+        }
+        .image section{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 10px;
+
+           
+
+        }
+        .im1{
+            position: absolute;
+           
+        }
+        .im1{
+             background-position: center;
+             background-size: cover;
+        }
+
+        .modelboxes{
+            width: 100%;
+            height: 100vh;
+         position: relative;
+
+
+        }
+        .mymodel{
+            width: 75%;
+            z-index : 1;
+            top: 0;
+            left:0;
+            position: absolute;
+            display: none;
+        
+
+        }
+
+        #im01{
+            width: 300px;
+            background-size: cover;
+            align-items: center;
+        }
+        .clo{
+            padding: 10px;
+            color: white;
+            bottom: 0px;
+            right:2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = " automove" id = "automove">
+        <div class = "image section" id = "imagesection">
+            <div class = "im1">
+                <img src = "swan.jpg" alt = "swam"  width= "300px">
+                <p>&times;</p>
+
+            </div>
+            <div class = "im1">
+                <img src = "forest.jpg" alt = "forest"  width= "300px">
+
+            </div>
+            <div class = "im1">
+                <img src = "laptop.jpg" alt = "laptop"  width= "300px">
+
+            </div>
+            <div class = "im1">
+                <img src = "montserrat.jpg" alt = "montserrat"  width= "300px">
+
+            </div>
+            <div class = "im1">
+                <img src = "pics/deer.jpg" alt = "montserrat"  width= "300px">
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class = "modelboxes">
+        <img id = 'imr' src = "pics/house.jpg" alt = "house" width="500px">
+        <div class = "mymodel" id = "modems">
+           <span class = "clo">&times;</span>
+            <img class = "model-content" id = "im01">
+            <div id = "capt"></div>
+        </div>
+    </div>
+    <div class = "ani">
+        <input type = "text" id = "welocome">
+        <img src = "pics/house.jpg" alt = "house">
+
+    </div>
+    <script>
+
+        let slideindex = 0;
+    autoslides(slideindex);
+
+    function autoslides(){
+        let auto = document.getElementById("imagesection")
+        let images = auto.getElementsByClassName("im1")
+        for (let i =0; i<images.length; i++){
+            images[i].style.display = "none"
+        }
+        slideindex++;
+        if(slideindex > images.length){
+            slideindex = 1
+        } 
+      images [slideindex-1].style.display = "block";
+      setTimeout(autoslides,2000);
+            
+        }
+    
+    // autoslides();
+    </script>
+    <script>
+        let mg = document.getElementById("modems")
+        let bx = document.getElementById("imr")
+        let mim = document.getElementById("im01")
+        let ct = document.getElementById("capt")
+        
+        bx.onclick = function (){
+       mg.style.display = "block";
+       mim.src = this.src;
+       ct.innerHTML = this.alt;
+        }
+
+        var span = document.getElementsByClassName("clo")[0];
+        span.onclick = function(){
+            mg.style.display = "none"
+        }
+    </script>
+</body>
+</html>

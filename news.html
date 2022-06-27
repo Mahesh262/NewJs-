@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.image-styled {
+  background-position: center;
+  background-size: cover;
+  background-image: url("flowers.jpg");
+  display: flex;
+  height: 75vmin;
+  width: 75vmin;
+  transition: .5s;
+  opacity: .4;
+
+}
+.image-styled:hover{
+    opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+    <div id="fadingImage" class="image-styled"></div>
+
+    
+
+    </body>
+
+    <script>
+        const imageEl = document.getElementById("fadingImage");
+const images = [
+  "swan.jpg",
+"forest.jpg",
+"field.jpg"];
+
+window.setInterval(changePicture, 3000);
+let i = 0;
+function changePicture() {
+  i++;
+  if (i > images.length - 1) i = 0;
+  imageEl.style.backgroundImage = `url(${images[i]})`;
+}
+        </script>
+       
+</body>
+</html>

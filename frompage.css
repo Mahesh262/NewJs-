@@ -1,0 +1,69 @@
+*{
+padding:0px;
+margin:0px;
+box-sizing:border-box;
+/*border:2px solid green;*/
+
+}
+body{
+    background: #dedede;
+    width:100%;
+
+}
+.back {
+    background:url(newpic/forest.jpg);
+    width:100%;
+    height:100vh;
+    background-position:center;
+    background-size:cover;
+    overflow:hidden;
+}
+
+ form{
+     display:flex;
+     flex-direction:column;
+     
+     width:50%;
+     padding-top:100px;
+     margin-left:150px;
+     color:white;
+     justify-content:space-between;
+     
+ }
+ .cl{
+    padding:5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:medium;
+    color:#fff;
+    width:100%;
+    font-size:15px;
+    font-weight:300px;
+ }
+ form ::placeholder{
+   font-weight:100px;
+   font-size:10px;
+   background:transparent;
+}
+input[type-text]:focus{
+    border:2px solid #dedede;
+}
+.edu{
+    display: flex;
+
+}
+textarea{
+    padding:25px;
+}
+.gender{
+display:flex;
+flex-direction:center;
+align-items:center;
+
+}
+input[type=submit]{
+    width:45%;
+    padding:20px;
+    text-align:center;
+    color:white;
+    background:green;
+}

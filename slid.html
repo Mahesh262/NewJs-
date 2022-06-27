@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+*{ 
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    background:#dedede;
+    position: relative;
+}
+.slide{
+    background:url(newpic/forest.jpg);
+    width:800px;
+    height:100vh;
+    position:absolute;
+    margin:100px 0px;
+    animation:slide 20s infinite;
+}
+@keyframes slide{
+       25%{
+           background:url(newpic/bo.jpg);
+
+       }
+       50%{
+           background:url(newpic/bcg.jpg);
+       }
+       75%{
+           background:url(newpic/stardev.png);
+       }
+      100%{
+          background:url(newpic/whatsapp screen.png);
+      
+      }
+}
+</style>
+</head>
+<body>
+    <div class="slide">
+        <div id="im"></div>
+    </div>
+</body>
+</html>

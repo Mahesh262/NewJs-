@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container bg-secondary"> -->
+    <!-- 
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">primary
+                <span class="badge  rounded-pill bg-danger">4</span>
+            </button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Tablet</a></li>
+                    <li><a class="dropdown-item" href="#">Tablet</a></li>
+                    <li><a class="dropdown-item" href="#">Tablet</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img src="forest.jpg" class="rounded" width="300px">
+        <div class="container mt-3 bg-info">
+            <h2>Anim</h2>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%">MAhesh</div>
+            </div>
+            <div class="spinner-grow text-success">X</div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="card-sm" width="400px">
+            <img class="card-image-top" src="london.jpg" alt="London" style="width: 100%">
+            <div class="card-body">
+                <h4 class="card-tittle">jhon</h4>
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. ccusantium exercitation,
+                </p>
+                <a href="#" class="btn btn-primary">SEE my profile</a>
+            </div>
+        </div>
+        <br>
+        <p>Image at the bottom (card-img-bottom):</p>
+        <div class="card" width="400px">
+            <div class="card-img-overlay">
+                <h4 class="card-tittle">jhon</h4>
+                <p class="card-text text-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. ccusantium
+                    exercitation,
+                </p>
+                <a href="#" class="btn btn-primary text-capitalize">See my profile</a>
+            </div>
+            <img class="card-image-bottom rounded" src="swan.jpg" width="100%">
+
+        </div>
+    </div>
+    <div class="container mt-3">
+        <button type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#demo">Simple
+            collapse</button>
+        <div id="demo" class="collapse">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, id sint, vel rerum est nostrum nesciunt,
+            impedit placeat dolorum saepe autem odio asperiores deserunt doloribus sequi aperiam quos magnam labore.
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn" data-bs-toggle="collapse" href="#collapseOne">grop1</a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, a tempora amet mollitia
+                        distinctio ipsum eum eaque provident tenetur temporibus id cupiditate. Voluptate doloremque non,
+                        asperiores blanditiis omnis minus nisi.
+                    </div>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <a class="btn" data-bs-toggle="collapse" href="#collapseTwo">grop2</a>
+                </div>
+                <div id="collapseTwo" class="collapse show" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro suscipit aspernatur eum, facilis
+                        placeat itaque quasi sapiente debitis? Neque eius sequi blanditiis excepturi culpa possimus
+                        numquam quod iste magnam dolores.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">logi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target='#collapsibleNavbar'>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-success" href="#" role="button"
+                            data-bs-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">like</a></li>
+                            <li><a class="dropdown-item">like</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="search">
+                    <button class="btn btn-primary">search
+                    </button>
+                </form>
+            </div>
+        </nav>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="forest.jpg" alt="losese" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h4>lossAngles</h4>
+                    <p> we had such great things</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="london.jpg" alt="losese" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h4>lossAngles</h4>
+                    <p> we had such great things</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="leo.jpg" alt="losese" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h4>lossAngles</h4>
+                    <p> we had such great things</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="lions.jpg" alt="losese" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h4>lossAngles</h4>
+                    <p> we had such great things</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    </div> -->
+
+    <!-- <div class="container mt-3 bg-success">
+        <h3> Model</h3>
+        <P>click on the to open</P>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Open
+            model</button>
+    </div>
+    <div class="modal bg-dark fade" id="myModal">
+
+        <div class="modal-dialog  modal-fullscreen">
+            <div class="modal-content">
+                <-- modal header -->
+    <!-- <div class="modal-header">
+                    <h4 class="modal-title">headings</h4>
+                    <p> modal dialog boxes</p>
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <div class="modal-body">
+                    welcomes homes
+                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="forest.jpg" alt="losese" class="d-block" style="width:100%">
+                                <div class="carousel-caption">
+                                    <h4>lossAngles</h4>
+                                    <p> we had such great things</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="london.jpg" alt="losese" class="d-block" style="width:100%">
+                                <div class="carousel-caption">
+                                    <h4>lossAngles</h4>
+                                    <p> we had such great things</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="leo.jpg" alt="losese" class="d-block" style="width:100%">
+                                <div class="carousel-caption">
+                                    <h4>lossAngles</h4>
+                                    <p> we had such great things</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="lions.jpg" alt="losese" class="d-block" style="width:100%">
+                                <div class="carousel-caption">
+                                    <h4>lossAngles</h4>
+                                    <p> we had such great things</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="container pt-5 bg-info">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maiores eligendi quae ut aut? Nobis rerum
+            aspernatur suscipit quos, dolorem cupiditate eveniet incidunt obcaecati consequuntur voluptatibus,
+            reprehenderit in consectetur corrupti.</p>
+        <div class="toast show">
+            <div class="toast-header">
+                <strong class="me-auto">toast heaseer</strong>
+                <button type="button" class="btn btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                <p>some text</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="offcanvas offcanvas-bottom" id="demo">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">pelex</h1>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body bg-dark text-light">
+            <p>shesddd asassdascs asax</p>
+            <p>shesddd asassdascs asax</p>
+            <p>shesddd asassdascs asax</p>
+            <p>shesddd asassdascs asax</p>
+            <p>shesddd asassdascs asax</p>
+            <p>shesddd asassdascs asax</p>
+            <button type="button" class="btn btn-primary">Abutton</button>
+        </div>
+
+    </div>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">OFFcanvas</button> -->
+
+
+
+
+
+    <!-- <form class="row">
+        <div class=" col-6 mb-3  bg-info ">
+            <label for="mail" class="form-label">
+                Email:
+            </label>
+            <input type="email" class="form-control" id="email" placeholder="entermailadddress">
+        </div>
+        <div class=" col-6 mb-3  bg-info">
+            <label for="pwd" class="form-label">password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="enter you password">
+        </div>
+        <div class=" form-check mb-3">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="remberme"> remberred
+            </label>
+
+        </div> -->
+    <!-- <div class="mb-3">
+            <label for="comment">comments:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        </div>
+        <input type="color" class="form-control form-control-color border-0" value="#CCCC">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <form>
+        <div class="input-group mt-5 mb-3">
+            <span class="input-group-text">Name:</span>
+            <input type="text" class="form-control" placeholder="FirstName">
+
+            <input type="text" class="form-control" placeholder="lastName">
+        </div>
+    </form>
+    <div class="container bg-info mt-3">
+        <form>
+            <div class="form-floating mt-0 mb-3">
+                <input type="text" class="form-control" id="email" placeholder="entramail" name="email">
+                <label for="email">Email</label>
+            </div>
+        </form> -->
+    <!-- </div> -->
+
+    <div class="container-fluid mt-3 bg-dark text-light">
+        <form action="par.html" class="was-validated">
+
+            <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">Username</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter your name" name="uname"
+                    pattern="[A-Za-z]{6,12}" required>
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">please fill form</div>
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label">password</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter your pawsord" name="passowrd"
+                    pattern="[A-Za-z0-9]{6,12}" required>
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">please fill form</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your pawsord" name="email"
+                    pattern="[A-Za-z0-9+@]{6,12}" required>
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">please fill form</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-check-label" for="myCheck">I agree</label>
+                <input class="from-check-input" type="checkbox" id="myCheck" required>
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">please read descrition</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+<!--
+        <script>
+        var tootltip = [].slice.call(document.querySelectorAll('[data-bs-toggle= "tooltip"]'))
+        var tootls = tootltip.map((tootletrigger) => {
+        return new bootstrap.Tooltip(tootletrigger)
+        })
+        </script> -->

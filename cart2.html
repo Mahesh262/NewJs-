@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartadding</title>
+    <style>
+        .cartt {
+            background: chocolate;
+        }
+
+        .car-img {
+            display: flex;
+            top: 20px;
+            justify-content: center;
+            background: rgb(122, 206, 122);
+        }
+
+        .cart2 {
+            display: flex;
+            background: green;
+        }
+
+        #title img {
+            width: 300px;
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: column;
+            background: green;
+        }
+
+        #se2 button {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <table cellpadding="4" cellspacing="4" border="1">
+        <tr>
+            <td valign="top">
+                <table cellpadding="4" cellspacing="4" border="0">
+                    <th>
+                        <tr>
+                            <td colspan="3" style="border: 2px solid green">
+                                products for sale
+                            </td>
+                        </tr>
+                    </th>
+                    <tbody>
+                        <tr>
+                            <td>TAble</td>
+                            <td>
+                                <input type="button" value="Add to Cart" onclick="AddtoCart('Table','bluesand', 400)" />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Door</td>
+                            <td>
+                                <input type="button" value="Add to Cart"
+                                    onclick="AddtoCart('Door','yellowsand',1500)" />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>veg</td>
+                            <td>
+                                <input type="button" value="Add to Cart" onclick="AddtoCart('veg','fresh',100)" />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>mangoes</td>
+                            <td>
+                                <input type="button" value="Add to Cart" onclick="AddtoCart('mangoes','chittor',100)" />
+
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </td>
+            <td valign="top">
+                <table cellpadding="4" cellspacing="4" border="1" id="collectproducts" style="color: green">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>descrition</td>
+                            <td>price</td>
+                        </tr>
+                    </thead>
+                    <tbody id="orderedbyproductstbl"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" align="right" id="money"> hero</td>
+
+                        </tr>
+
+                    </tfoot>
+                </table>
+            </td>
+        </tr>
+    </table>
+    - <script>
+        var shoppingCart = [];
+
+        function displayShoppingCart() {
+            var orderedproducts = document.getElementById('orderedbyproductstbl')
+            while (orderedproducts.rows.length > 0) {
+                orderedproducts.deleteRow(0);
+            }
+
+
+            var totalmoney = 0;
+
+            for (var product in shoppingCart) {
+
+                var row = orderedproducts.insertRow();
+
+                var cellName = row.insertCell(0);
+                var cellDescription = row.insertCell(1);
+                var cellPrice = row.insertCell(2);
+                cellPrice.align = "right";
+
+                cellName.innerHTML = shoppingCart[product].Name;
+                cellDescription.innerHTML = shoppingCart[product].Description;
+                cellPrice.innerHTML = shoppingCart[product].Price;
+                totalmoney += shoppingCart[product].Price;
+
+            }
+
+            document.getElementById('money').innerHTML = totalmoney;
+
+
+        }
+
+        function AddtoCart(name, description, price) {
+            var singleProduct = {};
+            singleProduct.Name = name;
+            singleProduct.Description = description;
+            singleProduct.Price = price;
+            shoppingCart.push(singleProduct);
+
+
+            displayShoppingCart();
+        }
+    </script> -->
+
+
+    <!-- <div class="cartt">
+        <div class="second2" id="item">
+            <img src="forest.jpg" alt="forst" width="300px">
+            <div class="title">size</div>
+            <select>
+                <option>home</option>
+                <option>alke</option>
+            </select>
+        </div>
+        <button onclick="addcart(item)">ADDING</button>
+
+    </div>
+    <div class="cart2">
+        <div class="title">
+            cart
+        </div>
+        <div id="title"></div>
+    </div>
+    <script>
+        var additemid = 0;
+
+        function addcart(item) {
+            additemid += 1;
+            let first = document.createElement("div")
+            first.classList.add("cartimg");
+            first.setAttribute('id', additemid)
+            var img = document.createElement("img")
+            img.setAttribute("src", item.children[0].currentSrc);
+
+            var title = document.createElement("div");
+            title.innerText = item.children[1].innerText;
+            var label = document.createElement("div");
+            label.innerText = item.children[2].children[0].innerText
+            var cartitems = document.getElementById("title");
+            first.append(img)
+            cartitems.appendChild(first);
+
+        }
+    </script> -->
+    <div id="div1" style="border:1px solid black;background-color:pink">
+        <div class="str1">
+            <img src="forest.jpg" alt="sers" width="300px"> </div>
+        <button onclick="myFunction()">Try it</button>
+
+    </div>
+    <div class="brod">
+        <p style="color:green">qasadsdf</p>
+    </div>
+
+    <div class="cart">
+        <div class="se1" id="se2">
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var elmnt = document.querySelector(".str1");
+            var sssn = document.createElement('button')
+            var cln = elmnt.cloneNode(true);
+            document.getElementById("se2").appendChild(cln);
+        }
+    </script>
+    <script>
+        var product = [];
+
+        function fun() {
+            var x = {};
+            x.price = document.getElementById('price').value;
+            x.title = document.getElementById('title').value;
+            product.push(x);
+
+            var iDiv = document.createElement('div');
+            iDiv.id = product.length;
+            iDiv.className = 'newlist';
+            document.getElementsByTagName('body')[0].appendChild(iDiv);
+
+            var para = document.createElement("span");
+            var node = document.createTextNode('Title: ' + x.title + ' |                    ');
+            para.appendChild(node);
+
+            var element = document.getElementById(product.length);
+            element.appendChild(para);
+
+            para = document.createElement("span");
+            node = document.createTextNode('Price: ' + x.price);
+            para.appendChild(node);
+
+            element.appendChild(para);
+        }
+    </script>
+
+
+    Title:<input id="title" type="text">
+    Price:<input id="price" type="number">
+    <button onClick="fun()">Add to Cart </button>
+
+    <div>
+        <p><b>Cart Info</b></p>
+    </div>
+    <div id="carss"></div>
+</body>
+
+</html>

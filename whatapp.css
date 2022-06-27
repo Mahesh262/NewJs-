@@ -1,0 +1,10 @@
+*{
+padding:0px;
+margin:0;
+box-sizing:border-box;
+border:22px solid red;
+}
+body{
+    background:#ccc;
+
+}
