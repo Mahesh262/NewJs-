@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo{
+            color: red;
+              display: flex;
+               transition: all 2s;
+               
+               flex-direction: row;
+        }
+              .fall{
+                transform: translateY(8rem) rotateZ(20deg);
+                opacity: 0;
+              }
+        
+    </style>
+     
+</head>
+ 
+<body>
+ 
+  <form>
+    <input type = "text" class="todo-in">
+    <button id="todo-button" type="submit">
+        Add
+    </button>
+  </form>   
+   <div class="select">
+    <select name="todos" class="filter-todo">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="uncompleted">Uncompleted</option>
+      </select>
+   </div>
+
+   <div class="todo-container">
+
+    <ul class="todo-list"></ul>
+   
+   </div>
+<script>
+ let todoin = document.querySelector(".todo-in");
+ let todobutton= document.querySelector("#todo-button")
+  let todolist = document.querySelector('.todo-list')
+  let filterlist = document.querySelector('.filter-todo')
+// Event lists
+
+  document.addEventListener("DOMContentLoaded",getTodo)
+ todobutton.addEventListener('click',addtodo)
+  todolist.addEventListener('click',deleteTOdo)
+  filterlist.addEventListener('click',filters)
+  
+  function addtodo(e){
+     e.preventDefault()
+    const tododiv = document.createElement('div')
+     tododiv.classList.add('todo')
+      console.log(tododiv)
+      const newTodo= document.createElement('li')
+       newTodo.innerText = todoin.value;
+
+       saveloc(todoin.value)
+       newTodo.classList.add('todo-items')
+       tododiv.appendChild(newTodo)
+    //    completed
+       const edited= document.createElement("button");
+        edited.innerHTML = "Edited";
+         edited.classList.add("edited-btn")
+        tododiv.appendChild(edited)
+
+        const deleted = document.createElement("button");
+        // del
+        deleted.innerHTML = "Trash";
+        deleted.classList.add("Trash")
+
+        tododiv.appendChild(deleted)
+         todolist.appendChild(tododiv)
+
+          todoin.value= '';
+
+  }
+
+   function deleteTOdo(e){
+     const  item = e.target;
+    //   delete
+     if(item.classList[0] === 'Trash'){
+         const todo = item.parentElement;
+          todo.classList.add('fall')
+           removes(todo)
+            todo.addEventListener("transitioned", e=>{
+                todo.remove();
+
+            })
+     }
+     if(item.classList[0] === 'edited-btn'){
+        const todo = item.parentElement;
+         todo.classList.toggle('edited')
+
+     }
+   }
+   
+    function filters(e){
+        const todos = todolist.childNodes;
+        //  console.log(todos)
+        todos.forEach( todo=>{
+            switch(e.target.value){
+                case "all": 
+                  todo.style.color="black";
+                break;
+
+                case "completed":
+                     if(todo.classList.contains("completed")){
+                        todo.style.color= "green";
+
+                     } else{
+                         todo.style.display= 'none'
+                     }
+                     break;
+                      case 'uncompleted': 
+                         if(todo.classList.contains("uncompleted")){
+                        todo.style.display= "flex";
+                             
+                         } else{
+                             todo.style.display="none";
+                         }
+                         break;
+
+            }
+        })
+    }
+    
+    function saveloc(todo){
+       let todos ;
+        if(localStorage.getItem('todos') === null){
+             todos=[];
+        } else{
+            todos  = JSON.parse(localStorage.getItem('todos'))
+        }
+         todos.push(todo);
+         localStorage.setItem('todos',JSON.stringify(todos))
+    }
+
+     function getTodo(){
+         let todos;
+          if(localStorage.getItem('todos')=== null){
+            todos=[];
+        } else{
+            todos  = JSON.parse(localStorage.getItem('todos'))
+
+          }
+
+          todos.forEach(todo=>{
+
+            const tododiv = document.createElement('div')
+     tododiv.classList.add('todo')
+      console.log(tododiv)
+      const newTodo= document.createElement('li')
+       newTodo.innerText = todo;
+
+       newTodo.classList.add('todo-items')
+       tododiv.appendChild(newTodo)
+    //    completed
+       const edited= document.createElement("button");
+        edited.innerHTML = "Edited";
+         edited.classList.add("edited-btn")
+        tododiv.appendChild(edited)
+
+        const deleted = document.createElement("button");
+        // del
+        deleted.innerHTML = "Trash";
+        deleted.classList.add("Trash")
+
+        tododiv.appendChild(deleted)
+         todolist.appendChild(tododiv)
+
+
+
+
+
+          })
+
+     }
+
+      function removes(todo){
+         let todos;
+          if(localStorage.getItem('todos')=== null){
+            todos=[];
+          } else{
+            todos = JSON.parse(localStorage.getItem('todos'))
+          }
+           const todoindex = todo.children[0].innerText
+             todos.splice(todos.indexOf(todoindex),1);
+             localStorage.setItem('todos', JSON.stringify(todos))
+      }
+</script>
+
+
+
+
+</body>
+</html>
